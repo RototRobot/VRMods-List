@@ -100,5 +100,38 @@ Valheim mod by manicmoose99
 [![Valheim](https://cdn.akamai.steamstatic.com/steam/apps/892970/header.jpg?t=1636710740)](https://www.nexusmods.com/valheim/mods/847)
 
 
+Richard Burns Rally VR Mod by Kegetys
+
+[![Richard Burns Rally](https://i.imgur.com/vWQNSou.jpg)](http://www.kegetys.fi/category/gaming/rbrmods/)
+
+
+The Dark Mod VR Mod by fholger who also created the awesome tools  openvr_foveated and  openvr_fsr
+
+[![The Dark Mod](https://raw.githubusercontent.com/fholger/thedarkmodvr/master/thedarkmodvr.png)](https://github.com/fholger/thedarkmodvr)
+
+
+GTA V and No One Lives forever 2 VR mods by LukeRoss
+
+[![GTA V](https://cdn.akamai.steamstatic.com/steam/apps/214490/header.jpg?t=1603026039)](https://github.com/LukeRoss00/gta5-real-mod)
+
+[![No One Lives forever 2](https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/69c8c5b08db98c39788c0c5be3f1e8c8.png)](https://github.com/LukeRoss00/nolf2-real-mod)
+
+LukeRoss has also created mods for Horizon: Zero Dawn, Mafia I, II, III (DE) however these are paywalled on his patreon.
+
+Cyberpunk 2077 VR mod by vorpx
+
+[![Cyberpunk 2077](https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1621944801)](https://www.vorpx.com/cyberpunk-vr-download/)
+
+
+##VR Injector tools
+
+Vorpx
+
+[![vorpx](https://i.imgur.com/JEc3fpR.png)](https://www.vorpx.com/)
+
+Vk3DVision by Helifax
+
+[![Vk3DVision](https://i.imgur.com/JNxJUIi.jpg)](http://3dsurroundgaming.com/Vk3DVision.html)
+
 ##VR Emulators
 
