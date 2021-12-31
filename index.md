@@ -10,6 +10,7 @@ And my [Reddit post](https://www.reddit.com/r/virtualreality/comments/rsbobp/jus
 
 Outer Wilds
 [![Outer Wilds](https://cdn.akamai.steamstatic.com/steam/apps/753640/header.jpg?t=1633026544)](https://outerwildsmods.com/mods/nomaivr/)
+
 Risk of Rain 2
 [![Risk of Rain 2](https://cdn.akamai.steamstatic.com/steam/apps/632360/header.jpg?t=1634918633)](https://thunderstore.io/package/DrBibop/VRMod/)
 
