@@ -11,6 +11,12 @@ Risk of Rain 2 mod by DrBibop
 
 [![Risk of Rain 2](https://cdn.akamai.steamstatic.com/steam/apps/632360/header.jpg?t=1634918633)](https://thunderstore.io/package/DrBibop/VRMod/)
 
+Star wars Jedi Outcast and Jedi Academy VR mods by xLAva 
+
+[![Jedi Outcast](https://cdn.akamai.steamstatic.com/steam/apps/6030/header.jpg?t=1586465683)](https://github.com/xLAva/JediOutcastLinux/releases/tag/v1.1.0.1)
+
+[![Jedi Academy](https://cdn.akamai.steamstatic.com/steam/apps/6020/header.jpg?t=1586462966)](https://github.com/xLAva/JediAcademyLinux/releases/tag/VR-v3.1.2)
+
 
 Minecraft mod Vivecraft by jrbudda and Techjar
 
