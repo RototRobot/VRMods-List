@@ -64,30 +64,3 @@ Risk of Rain 2
 
 ##VR Emulators
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## "Any Good Stratagy Games?"
-
----
-
-### TBA
-
-### "How about RTS?"
-
----
-
-### TBA
-
-
