@@ -2,11 +2,15 @@
 
 # This is A WIP
 
-Originally based on my [Google excel spread sheet of the same concept](https://docs.google.com/spreadsheets/d/1cnu3R813-RiJv9EPJD54qC7vBCrbh9xALIqz7hl5K-o/edit?usp=sharing)
+Originally based on my [Google excel spread sheet](https://docs.google.com/spreadsheets/d/1cnu3R813-RiJv9EPJD54qC7vBCrbh9xALIqz7hl5K-o/edit?usp=sharing)
+And my [Reddit post](https://www.reddit.com/r/virtualreality/comments/rsbobp/just_wanted_to_thank_some_of_the_incredible/)
+
 
 ##Games With Motion Controls
 
+Outer Wilds
 [![Outer Wilds](https://cdn.akamai.steamstatic.com/steam/apps/753640/header.jpg?t=1633026544)](https://outerwildsmods.com/mods/nomaivr/)
+Risk of Rain 2
 [![Risk of Rain 2](https://cdn.akamai.steamstatic.com/steam/apps/632360/header.jpg?t=1634918633)](https://thunderstore.io/package/DrBibop/VRMod/)
 
 [![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
