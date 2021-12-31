@@ -1,5 +1,7 @@
 # This is A WIP
 
+The Game images are links to the mods
+
 Originally based on my [Google excel spread sheet](https://docs.google.com/spreadsheets/d/1cnu3R813-RiJv9EPJD54qC7vBCrbh9xALIqz7hl5K-o/edit?usp=sharing)
 And my [Reddit post](https://www.reddit.com/r/virtualreality/comments/rsbobp/just_wanted_to_thank_some_of_the_incredible/)
 
