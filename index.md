@@ -46,6 +46,22 @@ Quake mod Quakespasm Orginally by phoboslab forked by Zackin5 then again by Fish
 
 [![QUAKE](https://cdn.akamai.steamstatic.com/steam/apps/2310/header.jpg?t=1629481608)](https://github.com/Fishbiter/Quakespasm-OpenVR)
 
+QuakeVR mod by vittorioromeo
+
+[![QUAKE](https://cdn.akamai.steamstatic.com/steam/apps/2310/header.jpg?t=1629481608)](https://github.com/vittorioromeo/quakevr)
+
+Garry's Mod VR by Catse 
+
+[![Garry's Mod](https://cdn.akamai.steamstatic.com/steam/apps/4000/header.jpg?t=1617307042)](https://steamcommunity.com/sharedfiles/filedetails/?id=1678408548)
+
+Kerbal Space program VR by Vivero
+
+[![Kerbal Space program](https://cdn.akamai.steamstatic.com/steam/apps/220200/header.jpg?t=1624555019)](https://github.com/Vivero/Kerbal-VR)
+
+Penumbra VR mod by veryjos
+
+[![Penumbra](https://cdn.akamai.steamstatic.com/steam/apps/22180/header.jpg?t=1617809968)](https://github.com/newyork167/penumbra_vr)
+
 Receiver mod 7DFPS byShadowBrian
 
 [![Receiver](https://cdn.akamai.steamstatic.com/steam/apps/234190/header.jpg?t=1586267903)](https://github.com/ShadowBrian/7DFPS)
