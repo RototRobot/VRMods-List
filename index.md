@@ -135,3 +135,12 @@ Vk3DVision by Helifax
 
 ##VR Emulators
 
+Carl Kenner for his Dolphin, PPSSPP, decaf-emu Emulator VR modifications
+
+[![Dolphin](https://i.imgur.com/xsOoJgV.jpg)](https://dolphinvr.wordpress.com/downloads/)
+
+[![PPSSPP](https://i.imgur.com/jRIfCJ2.jpg)](https://forums.oculusvr.com/t5/Games-and-Apps/PPSSPP-VR-PlayStation-Portable-emulator/td-p/277791)
+
+[![Decaf](https://i.imgur.com/HOJe0qt.jpg)](https://github.com/CarlKenner/decaf-emu)
+
+
