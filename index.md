@@ -143,4 +143,15 @@ Carl Kenner for his Dolphin, PPSSPP, decaf-emu Emulator VR modifications
 
 [![Decaf](https://i.imgur.com/HOJe0qt.jpg)](https://github.com/CarlKenner/decaf-emu)
 
+Avaer Kazmer for his N64 VR Emulator
+
+[![n64](https://i.imgur.com/sX0WkLT.jpg)](https://medium.com/webmr/n64-vr-with-javascript-e188de42ced5)
+
+Jay Mattis (braindx) for his VBjin-OVR Virtual Boy Emulator
+
+[![VBjin](https://i.imgur.com/MK3JQk1.jpg)](https://github.com/braindx/vbjin-ovr)
+
+
+
+
 
