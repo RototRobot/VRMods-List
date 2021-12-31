@@ -112,7 +112,7 @@ The Dark Mod VR Mod by fholger who also created the awesome tools  openvr_foveat
 
 GTA V and No One Lives forever 2 VR mods by LukeRoss
 
-[![GTA V](https://cdn.akamai.steamstatic.com/steam/apps/214490/header.jpg?t=1603026039)](https://github.com/LukeRoss00/gta5-real-mod)
+[![GTA V](https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1618856444)](https://github.com/LukeRoss00/gta5-real-mod)
 
 [![No One Lives forever 2](https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/69c8c5b08db98c39788c0c5be3f1e8c8.png)](https://github.com/LukeRoss00/nolf2-real-mod)
 
