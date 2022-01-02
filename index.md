@@ -109,7 +109,7 @@ Richard Burns Rally VR Mod by Kegetys
 
 The Dark Mod VR Mod by fholger who also created the awesome tools  openvr_foveated and  openvr_fsr
 
-[![The Dark Mod](https://raw.githubusercontent.com/fholger/thedarkmodvr/master/thedarkmodvr.png)](https://github.com/fholger/thedarkmodvr)
+[![The Dark Mod](https://i.imgur.com/fIuV3Ye.jpg)](https://github.com/fholger/thedarkmodvr)
 
 GTA V and No One Lives forever 2 VR mods by LukeRoss
 
