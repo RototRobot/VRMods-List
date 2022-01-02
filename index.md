@@ -111,7 +111,6 @@ The Dark Mod VR Mod by fholger who also created the awesome tools  openvr_foveat
 
 [![The Dark Mod](https://raw.githubusercontent.com/fholger/thedarkmodvr/master/thedarkmodvr.png)](https://github.com/fholger/thedarkmodvr)
 
-
 GTA V and No One Lives forever 2 VR mods by LukeRoss
 
 [![GTA V](https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1618856444)](https://github.com/LukeRoss00/gta5-real-mod)
@@ -123,6 +122,10 @@ LukeRoss has also created mods for Horizon: Zero Dawn, Mafia I, II, III (DE) how
 Cyberpunk 2077 VR mod by vorpx
 
 [![Cyberpunk 2077](https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1621944801)](https://www.vorpx.com/cyberpunk-vr-download/)
+
+Sonic Robo Blast 2 VR Mod by chreas 
+
+[![Cyberpunk 2077](https://i.imgur.com/jTYgbGG.jpg)](https://mb.srb2.org/addons/srb2-vr-mod.3559/)
 
 
 ##VR Injector tools
