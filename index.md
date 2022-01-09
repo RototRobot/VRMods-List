@@ -19,6 +19,14 @@ Star wars Jedi Outcast and Jedi Academy VR mods by xLAva
 
 [![Jedi Academy](https://cdn.akamai.steamstatic.com/steam/apps/6020/header.jpg?t=1586462966)](https://github.com/xLAva/JediAcademyLinux/releases/tag/VR-v3.1.2)
 
+Subnautica: Below Zero VR mod by elliotttate
+
+[![Subnautica: Below Zero](https://cdn.akamai.steamstatic.com/steam/apps/848450/header.jpg?t=1634085044)](https://www.notion.so/beastsaber/Subnautica-Below-Zero-VR-Mod-08645fc02a1f4d039c2f25bfd515a140)
+
+Spyro Reignited Trilogy VR mod by Arman Haçikoğlu 
+
+[![Spyro](https://cdn.akamai.steamstatic.com/steam/apps/996580/header.jpg?t=1588789018)](https://github.com/InfinateXtremer/ReignitedVRMod/releases)
+
 
 Minecraft mod Vivecraft by jrbudda and Techjar
 
