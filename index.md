@@ -50,6 +50,9 @@ Risk of Rain 2 mod by DrBibop
 
 [![Risk of Rain 2](https://cdn.akamai.steamstatic.com/steam/apps/632360/header.jpg?t=1634918633)](https://thunderstore.io/package/DrBibop/VRMod/)
 
+Life Is Strange: Before The Storm VR Mod DawnVR by TrevTV
+ 
+[![Life Is Strange](https://cdn.cloudflare.steamstatic.com/steam/apps/554620/header.jpg?t=1637335403)](https://github.com/TrevTV/DawnVR)
 
 Alien: isolation mod MotherVR by Nibre
 
