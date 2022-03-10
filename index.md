@@ -68,7 +68,9 @@ GTA V and No One Lives forever 2 VR mods by LukeRoss
 
 [![No One Lives forever 2](https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/69c8c5b08db98c39788c0c5be3f1e8c8.png)](https://github.com/LukeRoss00/nolf2-real-mod)
 
-LukeRoss has also created mods for Horizon: Zero Dawn, Mafia I, II, III (DE) however these are paywalled on his patreon.
+LukeRoss has also created mods for Cyberpunk 2077, Horizon: Zero Dawn, Mafia I, II, III (DE) however these are paywalled on his patreon.
+
+https://www.patreon.com/realvr
 
 Penumbra VR mod by veryjos
 
