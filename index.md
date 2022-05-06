@@ -122,6 +122,10 @@ Kerbal Space program VR by Vivero
 
 [![Kerbal Space program](https://cdn.akamai.steamstatic.com/steam/apps/220200/header.jpg?t=1624555019)](https://github.com/Vivero/Kerbal-VR)
 
+The Sims 4 VR Mod by convexvr
+
+[![The Sims 4](https://cdn.cloudflare.steamstatic.com/steam/apps/1222670/header.jpg?t=1647882700)](https://github.com/convexvr/sims4-vr)
+
 Richard Burns Rally VR Mod by Kegetys
 
 [![Richard Burns Rally](https://i.imgur.com/vWQNSou.jpg)](http://www.kegetys.fi/category/gaming/rbrmods/)
