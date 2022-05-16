@@ -126,6 +126,11 @@ The Sims 4 VR Mod by convexvr
 
 [![The Sims 4](https://cdn.cloudflare.steamstatic.com/steam/apps/1222670/header.jpg?t=1647882700)](https://github.com/convexvr/sims4-vr)
 
+The Left 4 Dead 2 VR Mod by sd805
+
+[![Left 4 Dead 2](https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1630686839)](https://github.com/sd805/l4d2vr)
+
+
 Richard Burns Rally VR Mod by Kegetys
 
 [![Richard Burns Rally](https://i.imgur.com/vWQNSou.jpg)](http://www.kegetys.fi/category/gaming/rbrmods/)
