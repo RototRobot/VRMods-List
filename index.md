@@ -27,6 +27,11 @@ Minecraft mod Vivecraft by jrbudda and Techjar
 
 [![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
 
+Deep Rock Galactic VR Mod by Alch3m1st
+
+[![Deep Rock Galactic](https://cdn.cloudflare.steamstatic.com/steam/apps/548430/header.jpg?t=1653712740)](https://drg.mod.io/vrg)
+
+
 MechWarrior 5mod by KITT2
 
 [![MechWarrior 5](https://cdn.akamai.steamstatic.com/steam/apps/784080/header.jpg?t=1632152493)](https://www.nexusmods.com/mechwarrior5mercenaries/mods/531)
