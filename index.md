@@ -19,7 +19,7 @@ Table of Contents
 
 
 
-##Full Motion Controls
+## Full Motion Controls
 
 Resident Evil 2 3 7 and 8 by praydog
 
@@ -110,14 +110,14 @@ The Left 4 Dead 2 VR Mod by sd805
 [![Left 4 Dead 2](https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1630686839)](https://github.com/sd805/l4d2vr)
 
 
-##Motion Gestures
+## Motion Gestures
 
 Cyberpunk 2077 VR mod by vorpx
 
 [![Cyberpunk 2077](https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1621944801)](https://www.vorpx.com/cyberpunk-vr-download/)
 
 
-##Headtracked only
+## Headtracked only
 
 MechWarrior 5mod by KITT2
 
@@ -171,7 +171,7 @@ Sonic Robo Blast 2 VR Mod by chreas
 
 [![Sonic](https://i.imgur.com/jTYgbGG.jpg)](https://mb.srb2.org/addons/srb2-vr-mod.3559/)
 
-##VR Injector tools
+## VR Injector tools
 
 Vorpx
 
@@ -181,7 +181,7 @@ Vk3DVision by Helifax
 
 [![Vk3DVision](https://i.imgur.com/JNxJUIi.jpg)](http://3dsurroundgaming.com/Vk3DVision.html)
 
-##VR Emulators
+## VR Emulators
 
 Carl Kenner for his Dolphin, PPSSPP, decaf-emu Emulator VR modifications
 
