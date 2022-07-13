@@ -39,6 +39,12 @@ Outer Wilds Mod nomai vr by Raicuparta
 
 [![Outer Wilds](https://cdn.akamai.steamstatic.com/steam/apps/753640/header.jpg?t=1633026544)](https://outerwildsmods.com/mods/nomaivr/)
 
+The Stanley Parable: Ultra Deluxe VR by Raicuparta
+
+[![Outer Wilds](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)](https://outerwildsmods.com/mods/nomaivr/)
+
+Stanley Parable VR is Currenly Pay for access
+
 GTFO Mod by DSprtn
 
 [![GTFO](https://cdn.akamai.steamstatic.com/steam/apps/493520/header.jpg?t=1635776146)](https://github.com/DSprtn/GTFO_VR_Plugin)
@@ -108,6 +114,15 @@ QuakeVR mod by vittorioromeo
 The Left 4 Dead 2 VR Mod by sd805
 
 [![Left 4 Dead 2](https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1630686839)](https://github.com/sd805/l4d2vr)
+
+
+Witcher in Virtual Reality by PatrykLoan
+
+[![The Witcher](https://cdn.akamai.steamstatic.com/steam/apps/20900/header.jpg?t=1646335465)]([https://github.com/sd805/l4d2vr](https://www.nexusmods.com/witcher/mods/838?tab=description))
+
+Not a full mod more like a re-implementation into VR
+
+
 
 
 ## Motion Gestures
