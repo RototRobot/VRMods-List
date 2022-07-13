@@ -41,7 +41,7 @@ Outer Wilds Mod nomai vr by Raicuparta
 
 The Stanley Parable: Ultra Deluxe VR by Raicuparta
 
-[![Outer Wilds](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)](https://outerwildsmods.com/mods/nomaivr/)
+[![Stanley Parable](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)]([https://outerwildsmods.com/mods/nomaivr/](https://www.patreon.com/raivr))
 
 Stanley Parable VR is Currenly Pay for access
 
