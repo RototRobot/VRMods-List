@@ -41,7 +41,7 @@ Outer Wilds Mod nomai vr by Raicuparta
 
 The Stanley Parable: Ultra Deluxe VR by Raicuparta
 
-[![Stanley Parable](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)]([https://outerwildsmods.com/mods/nomaivr/](https://www.patreon.com/raivr))
+[![Stanley Parable](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)](https://www.patreon.com/raivr)
 
 Stanley Parable VR is Currenly Pay for access
 
@@ -118,7 +118,7 @@ The Left 4 Dead 2 VR Mod by sd805
 
 Witcher in Virtual Reality by PatrykLoan
 
-[![The Witcher](https://cdn.akamai.steamstatic.com/steam/apps/20900/header.jpg?t=1646335465)]([https://github.com/sd805/l4d2vr](https://www.nexusmods.com/witcher/mods/838?tab=description))
+[![The Witcher](https://cdn.akamai.steamstatic.com/steam/apps/20900/header.jpg?t=1646335465)](https://www.nexusmods.com/witcher/mods/838)
 
 Not a full mod more like a re-implementation into VR
 
