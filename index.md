@@ -123,6 +123,11 @@ Witcher in Virtual Reality by PatrykLoan
 Not a full mod more like a re-implementation into VR
 
 
+Saints Row (2022) by Zolika1351
+
+[![Saints Row](https://i.imgur.com/Ir25tq3.jpg)](https://twitter.com/Zolika1351/status/1567929703209525252)
+
+Link to the tweet which contains a link to the mod. Saints Row (2022) is currently an Epic Exclusive.
 
 
 ## Motion Gestures
