@@ -106,7 +106,7 @@ Saints Row (2022) by Zolika1351
 
 Saints Row (2022) is currently an Epic Exclusive.
 
-Doom 3 original by KozGit updates by Fishbiter then NPi2Loup
+Doom 3 originally by KozGit updates by Fishbiter then NPi2Loup
 
 [![DOOM 3](https://cdn.akamai.steamstatic.com/steam/apps/208200/header.jpg?t=1569960032)](https://github.com/NPi2Loup/DOOM-3-BFG-VR)
 
