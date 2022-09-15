@@ -45,13 +45,17 @@ The Stanley Parable: Ultra Deluxe VR by Raicuparta
 
 Stanley Parable VR is Currenly Pay for access
 
-GTFO Mod by DSprtn
+Half-Life 2 by The Source VR Mod Team	
 
-[![GTFO](https://cdn.akamai.steamstatic.com/steam/apps/493520/header.jpg?t=1635776146)](https://github.com/DSprtn/GTFO_VR_Plugin)
+[![HL2VR](https://cdn.cloudflare.steamstatic.com/steam/apps/220/header.jpg?t=1591063154)](https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/)
 
 Minecraft mod Vivecraft by jrbudda and Techjar
 
 [![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
+
+GTFO Mod by DSprtn
+
+[![GTFO](https://cdn.akamai.steamstatic.com/steam/apps/493520/header.jpg?t=1635776146)](https://github.com/DSprtn/GTFO_VR_Plugin)
 
 Deep Rock Galactic VR Mod by Alch3m1st
 
@@ -61,15 +65,9 @@ Valheim mod by manicmoose99
 
 [![Valheim](https://cdn.akamai.steamstatic.com/steam/apps/892970/header.jpg?t=1636710740)](https://www.nexusmods.com/valheim/mods/847)
 
-Half-Life 2 by The Source VR Mod Team	
-
-[![HL2VR](https://cdn.cloudflare.steamstatic.com/steam/apps/220/header.jpg?t=1591063154)](https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/)
-
-
 Garry's Mod VR by Catse 
 
 [![Garry's Mod](https://cdn.akamai.steamstatic.com/steam/apps/4000/header.jpg?t=1617307042)](https://steamcommunity.com/sharedfiles/filedetails/?id=1678408548)
-
 
 Risk of Rain 2 mod by DrBibop
 
