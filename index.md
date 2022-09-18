@@ -77,7 +77,6 @@ Raft VR mod by DrBibop
 
 [![Raft](https://cdn.akamai.steamstatic.com/steam/apps/648800/header.jpg?t=1655744208)](https://www.raftmodding.com/mods/raftvr)
 
-
 Life Is Strange: Before The Storm VR Mod DawnVR by TrevTV
  
 [![Life Is Strange](https://cdn.cloudflare.steamstatic.com/steam/apps/554620/header.jpg?t=1637335403)](https://github.com/TrevTV/DawnVR)
