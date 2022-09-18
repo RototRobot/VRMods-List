@@ -21,6 +21,14 @@ Table of Contents
 
 ## Full Motion Controls
 
+Half-Life 2 by The Source VR Mod Team	
+
+[![HL2VR](https://cdn.cloudflare.steamstatic.com/steam/apps/220/header.jpg?t=1591063154)](https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/)
+
+Minecraft mod Vivecraft by jrbudda and Techjar
+
+[![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
+
 Resident Evil 2 3 7 and 8 by praydog
 
 [![Resident Evil 2](https://cdn.akamai.steamstatic.com/steam/apps/883710/header.jpg?t=1635811811)](https://github.com/praydog/REFramework)
@@ -44,14 +52,6 @@ The Stanley Parable: Ultra Deluxe VR by Raicuparta
 [![Stanley Parable](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)](https://www.patreon.com/raivr)
 
 Stanley Parable VR is Currenly Pay for access
-
-Half-Life 2 by The Source VR Mod Team	
-
-[![HL2VR](https://cdn.cloudflare.steamstatic.com/steam/apps/220/header.jpg?t=1591063154)](https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/)
-
-Minecraft mod Vivecraft by jrbudda and Techjar
-
-[![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
 
 GTFO Mod by DSprtn
 
