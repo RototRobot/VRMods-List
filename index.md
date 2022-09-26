@@ -51,7 +51,13 @@ The Stanley Parable: Ultra Deluxe VR by Raicuparta
 
 [![Stanley Parable](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)](https://www.patreon.com/raivr)
 
-Stanley Parable VR is Currenly Pay for access
+Stanley Parable VR is currenly pay for access
+
+Neon White VR by Raicuparta
+
+[![Stanley Parable](https://cdn.cloudflare.steamstatic.com/steam/apps/1533420/header.jpg?t=1660855488)](https://raicuparta.itch.io/heaven-vr)
+
+HeavenVR is currenly pay for access either patreon or Itch.io
 
 GTFO Mod by DSprtn
 
