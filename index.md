@@ -55,9 +55,15 @@ Stanley Parable VR is currenly pay for access
 
 Neon White VR by Raicuparta
 
-[![Stanley Parable](https://cdn.cloudflare.steamstatic.com/steam/apps/1533420/header.jpg?t=1660855488)](https://raicuparta.itch.io/heaven-vr)
+[![Neon White](https://cdn.cloudflare.steamstatic.com/steam/apps/1533420/header.jpg?t=1660855488)](https://raicuparta.itch.io/heaven-vr)
 
 HeavenVR is currenly pay for access either patreon or Itch.io
+
+Trombone Champ VR Mod by Raicuparta
+
+[![Trombone Champ](https://cdn.cloudflare.steamstatic.com/steam/apps/1059990/header.jpg?t=1663352178)](https://www.patreon.com/raivr)
+
+Trombone Champ VR is currenly pay for access
 
 GTFO Mod by DSprtn
 
