@@ -29,41 +29,55 @@ Minecraft mod Vivecraft by jrbudda and Techjar
 
 [![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
 
-Resident Evil 2 3 7 and 8 by praydog
+### Mods by praydog
+
+Resident Evil 2
 
 [![Resident Evil 2](https://cdn.akamai.steamstatic.com/steam/apps/883710/header.jpg?t=1635811811)](https://github.com/praydog/REFramework)
 
+Resident Evil 3
+
 [![Resident Evil 3](https://cdn.akamai.steamstatic.com/steam/apps/952060/header.jpg?t=1635811814)](https://github.com/praydog/REFramework)
+
+Resident Evil 7
 
 [![Resident Evil 7](https://cdn.akamai.steamstatic.com/steam/apps/418370/header.jpg?t=1634882274)](https://github.com/praydog/REFramework)
 
+Resident Evil 8
+
 [![Resident Evil Village](https://cdn.akamai.steamstatic.com/steam/apps/1196590/header.jpg?t=1634882204)](https://github.com/praydog/REFramework)
 
-Firewatch mod Two-Forks VR by Raicuparta
+---
+
+### Mods by praydog Raicuparta
+
+Two-Forks for Firewatch
 
 [![Firewatch](https://cdn.akamai.steamstatic.com/steam/apps/383870/header.jpg?t=1641234515)](https://github.com/Raicuparta/two-forks-vr)
 
-Outer Wilds Mod nomai vr by Raicuparta
+nomai VR for Outer Wilds
 
 [![Outer Wilds](https://cdn.akamai.steamstatic.com/steam/apps/753640/header.jpg?t=1633026544)](https://outerwildsmods.com/mods/nomaivr/)
 
-The Stanley Parable: Ultra Deluxe VR by Raicuparta
+The Stanley Parable: Ultra Deluxe
 
 [![Stanley Parable](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)](https://www.patreon.com/raivr)
 
 Stanley Parable VR is currenly pay for access
 
-Neon White VR by Raicuparta
+HeavenVR for Neon White
 
 [![Neon White](https://cdn.cloudflare.steamstatic.com/steam/apps/1533420/header.jpg?t=1660855488)](https://raicuparta.itch.io/heaven-vr)
 
 HeavenVR is currenly pay for access either patreon or Itch.io
 
-Trombone Champ VR Mod by Raicuparta
+Trombone Champ
 
 [![Trombone Champ](https://cdn.cloudflare.steamstatic.com/steam/apps/1059990/header.jpg?t=1663352178)](https://www.patreon.com/raivr)
 
 Trombone Champ VR is currenly pay for access
+
+---
 
 GTFO Mod by DSprtn
 
@@ -81,13 +95,17 @@ Garry's Mod VR by Catse
 
 [![Garry's Mod](https://cdn.akamai.steamstatic.com/steam/apps/4000/header.jpg?t=1617307042)](https://steamcommunity.com/sharedfiles/filedetails/?id=1678408548)
 
-Risk of Rain 2 mod by DrBibop
+### Mods by DrBibop
+
+Risk of Rain 2
 
 [![Risk of Rain 2](https://cdn.akamai.steamstatic.com/steam/apps/632360/header.jpg?t=1634918633)](https://thunderstore.io/package/DrBibop/VRMod/)
 
-Raft VR mod by DrBibop
+Raft
 
 [![Raft](https://cdn.akamai.steamstatic.com/steam/apps/648800/header.jpg?t=1655744208)](https://www.raftmodding.com/mods/raftvr)
+
+---
 
 Life Is Strange: Before The Storm VR Mod DawnVR by TrevTV
  
@@ -110,15 +128,19 @@ Receiver mod 7DFPS byShadowBrian
 
 [![https://store.steampowered.com/app/1129310/Receiver_2/](https://cdn.akamai.steamstatic.com/steam/apps/1129310/header.jpg?t=1633969361)](https://store.steampowered.com/app/1129310/Receiver_2/)
 
-Saints Row: The Third by Zolika1351
+### Mods by Zolika1351
+
+Saints Row: The Third
 
 [![Saints Row 3](https://cdn.akamai.steamstatic.com/steam/apps/55230/header.jpg?t=1623408556)](https://zolika1351.pages.dev/mods/sr3menu)
 
-Saints Row (2022) by Zolika1351
+Saints Row (2022)
 
 [![Saints Row](https://i.imgur.com/Ir25tq3.jpg)](https://zolika1351.pages.dev/mods/sr5menu)
 
 Saints Row (2022) is currently an Epic Exclusive.
+
+---
 
 Doom 3 originally by KozGit updates by Fishbiter then NPi2Loup
 
@@ -173,13 +195,19 @@ Alien: isolation mod MotherVR by Nibre
 
 [![Alien: Isolation](https://cdn.akamai.steamstatic.com/steam/apps/214490/header.jpg?t=1603026039)](https://github.com/Nibre/MotherVR/releases)
 
-GTA V and No One Lives forever 2 VR mods by LukeRoss
+### Mods by LukeRoss
+
+GTA V VR mods
 
 [![GTA V](https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1618856444)](https://github.com/LukeRoss00/gta5-real-mod)
+
+ No One Lives forever 2
 
 [![No One Lives forever 2](https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/69c8c5b08db98c39788c0c5be3f1e8c8.png)](https://github.com/LukeRoss00/nolf2-real-mod)
 
 LukeRoss has also created mods for Cyberpunk 2077, Horizon: Zero Dawn, Mafia I, II, III (DE), Ghostwire: Tokyo however these are paywalled on his patreon. https://www.patreon.com/realvr
+
+---
 
 STAR WARS: TIE Fighter mod by AngelTFTC	
 
