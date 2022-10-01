@@ -29,7 +29,11 @@ Minecraft mod Vivecraft by jrbudda and Techjar
 
 [![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
 
+
+
 ### Mods by praydog
+
+---
 
 Resident Evil 2
 
@@ -50,6 +54,8 @@ Resident Evil 8
 ---
 
 ### Mods by praydog Raicuparta
+
+---
 
 Two-Forks for Firewatch
 
@@ -97,6 +103,8 @@ Garry's Mod VR by Catse
 
 ### Mods by DrBibop
 
+---
+
 Risk of Rain 2
 
 [![Risk of Rain 2](https://cdn.akamai.steamstatic.com/steam/apps/632360/header.jpg?t=1634918633)](https://thunderstore.io/package/DrBibop/VRMod/)
@@ -129,6 +137,8 @@ Receiver mod 7DFPS byShadowBrian
 [![https://store.steampowered.com/app/1129310/Receiver_2/](https://cdn.akamai.steamstatic.com/steam/apps/1129310/header.jpg?t=1633969361)](https://store.steampowered.com/app/1129310/Receiver_2/)
 
 ### Mods by Zolika1351
+
+---
 
 Saints Row: The Third
 
@@ -196,6 +206,8 @@ Alien: isolation mod MotherVR by Nibre
 [![Alien: Isolation](https://cdn.akamai.steamstatic.com/steam/apps/214490/header.jpg?t=1603026039)](https://github.com/Nibre/MotherVR/releases)
 
 ### Mods by LukeRoss
+
+---
 
 GTA V VR mods
 
