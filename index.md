@@ -69,7 +69,7 @@ nomai VR for Outer Wilds
 
 Hardspace: Shipbreaker
 
-[![Hardspace: Shipbreaker](The Stanley Parable: Ultra Deluxe)](https://raicuparta.itch.io/shipbreaker-vr)
+[![Hardspace Shipbreaker](https://cdn.cloudflare.steamstatic.com/steam/apps/1161580/header.jpg?t=1663321949)](https://raicuparta.itch.io/shipbreaker-vr)
 
 The Stanley Parable: Ultra Deluxe
 
