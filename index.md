@@ -67,6 +67,10 @@ nomai VR for Outer Wilds
 
 [![Outer Wilds](https://cdn.akamai.steamstatic.com/steam/apps/753640/header.jpg?t=1633026544)](https://outerwildsmods.com/mods/nomaivr/)
 
+Hardspace: Shipbreaker
+
+[![Hardspace: Shipbreaker](The Stanley Parable: Ultra Deluxe)](https://raicuparta.itch.io/shipbreaker-vr)
+
 The Stanley Parable: Ultra Deluxe
 
 [![Stanley Parable](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)](https://www.patreon.com/raivr)
