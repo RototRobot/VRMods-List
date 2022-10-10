@@ -61,7 +61,7 @@ Resident Evil 8
 
 Two-Forks for Firewatch
 
-[![Firewatch](https://cdn.akamai.steamstatic.com/steam/apps/383870/header.jpg?t=1641234515)](https://github.com/Raicuparta/two-forks-vr)
+[![Firewatch](https://cdn.akamai.steamstatic.com/steam/apps/383870/header.jpg?t=1641234515)](https://raicuparta.itch.io/two-forks-vr)
 
 nomai VR for Outer Wilds
 
