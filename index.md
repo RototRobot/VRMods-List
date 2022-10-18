@@ -21,7 +21,9 @@ Table of Contents
 
 
 
-## Full Motion Controls
+### Full Motion Controls
+
+---
 
 Half-Life 2 by The Source VR Mod Team	
 
@@ -33,9 +35,7 @@ Minecraft mod Vivecraft by jrbudda and Techjar
 
 
 
-### Mods by praydog
-
----
+## Mods by praydog
 
 Resident Evil 2
 
@@ -53,11 +53,8 @@ Resident Evil 8
 
 [![Resident Evil Village](https://cdn.akamai.steamstatic.com/steam/apps/1196590/header.jpg?t=1634882204)](https://github.com/praydog/REFramework)
 
----
 
-### Mods by praydog Raicuparta
-
----
+## Mods by praydog Raicuparta
 
 Two-Forks for Firewatch
 
@@ -89,8 +86,6 @@ Trombone Champ
 
 Trombone Champ VR is currenly pay for access
 
----
-
 GTFO Mod by DSprtn
 
 [![GTFO](https://cdn.akamai.steamstatic.com/steam/apps/493520/header.jpg?t=1635776146)](https://github.com/DSprtn/GTFO_VR_Plugin)
@@ -107,9 +102,7 @@ Garry's Mod VR by Catse
 
 [![Garry's Mod](https://cdn.akamai.steamstatic.com/steam/apps/4000/header.jpg?t=1617307042)](https://steamcommunity.com/sharedfiles/filedetails/?id=1678408548)
 
-### Mods by DrBibop
-
----
+## Mods by DrBibop
 
 Risk of Rain 2
 
@@ -119,7 +112,6 @@ Raft
 
 [![Raft](https://cdn.akamai.steamstatic.com/steam/apps/648800/header.jpg?t=1655744208)](https://www.raftmodding.com/mods/raftvr)
 
----
 
 Life Is Strange: Before The Storm VR Mod DawnVR by TrevTV
  
@@ -135,16 +127,13 @@ Star wars Jedi Outcast and Jedi Academy VR mods by xLAva
 
 [![Jedi Academy](https://cdn.akamai.steamstatic.com/steam/apps/6020/header.jpg?t=1586462966)](https://github.com/xLAva/JediAcademyLinux/releases/tag/VR-v3.1.2)
 
-
 Receiver mod 7DFPS byShadowBrian
 
 [![Receiver](https://cdn.akamai.steamstatic.com/steam/apps/234190/header.jpg?t=1586267903)](https://github.com/ShadowBrian/7DFPS)
 
 [![https://store.steampowered.com/app/1129310/Receiver_2/](https://cdn.akamai.steamstatic.com/steam/apps/1129310/header.jpg?t=1633969361)](https://store.steampowered.com/app/1129310/Receiver_2/)
 
-### Mods by Zolika1351
-
----
+## Mods by Zolika1351
 
 Saints Row: The Third
 
@@ -155,8 +144,6 @@ Saints Row (2022)
 [![Saints Row](https://i.imgur.com/Ir25tq3.jpg)](https://zolika1351.pages.dev/mods/sr5menu)
 
 Saints Row (2022) is currently an Epic Exclusive.
-
----
 
 Doom 3 originally by KozGit updates by Fishbiter then NPi2Loup
 
@@ -190,14 +177,14 @@ Not a full mod more like a re-implementation into VR
 
 
 
-## Motion Gestures
+### Motion Gestures
 
 Cyberpunk 2077 VR mod by vorpx
 
 [![Cyberpunk 2077](https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1621944801)](https://www.vorpx.com/cyberpunk-vr-download/)
 
 
-## Headtracked only
+### Headtracked only
 
 MechWarrior 5mod by KITT2
 
@@ -211,9 +198,8 @@ Alien: isolation mod MotherVR by Nibre
 
 [![Alien: Isolation](https://cdn.akamai.steamstatic.com/steam/apps/214490/header.jpg?t=1603026039)](https://github.com/Nibre/MotherVR/releases)
 
-### Mods by LukeRoss
+## Mods by LukeRoss
 
----
 
 GTA V VR mods
 
@@ -224,8 +210,6 @@ GTA V VR mods
 [![No One Lives forever 2](https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/69c8c5b08db98c39788c0c5be3f1e8c8.png)](https://github.com/LukeRoss00/nolf2-real-mod)
 
 LukeRoss has also created mods for Cyberpunk 2077, Horizon: Zero Dawn, Mafia I, II, III (DE), Ghostwire: Tokyo however these are paywalled on his patreon. https://www.patreon.com/realvr
-
----
 
 STAR WARS: TIE Fighter mod by AngelTFTC	
 
@@ -263,10 +247,9 @@ Sonic Robo Blast 2 VR Mod by chreas
 
 [![Sonic](https://i.imgur.com/jTYgbGG.jpg)](https://mb.srb2.org/addons/srb2-vr-mod.3559/)
 
-## VR Injector tools
+### VR Injector tools
 
 Geo3D by Flugan
-
 
 [![Geo3D](https://i.imgur.com/y6bo2f4.jpg)](https://github.com/Flugan/Geo3D-Release)
 
@@ -278,7 +261,7 @@ Vk3DVision by Helifax
 
 [![Vk3DVision](https://i.imgur.com/JNxJUIi.jpg)](http://3dsurroundgaming.com/Vk3DVision.html)
 
-## VR Emulators
+### VR Emulators
 
 Carl Kenner for his Dolphin, PPSSPP, decaf-emu Emulator VR modifications
 
