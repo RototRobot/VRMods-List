@@ -25,14 +25,17 @@ Table of Contents
 
 ---
 
-Half-Life 2 by The Source VR Mod Team	
-
-[![HL2VR](https://cdn.cloudflare.steamstatic.com/steam/apps/220/header.jpg?t=1591063154)](https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/)
-
 Minecraft mod Vivecraft by jrbudda and Techjar
 
 [![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
 
+Half-Life 2 by The Source VR Mod Team	
+
+[![HL2VR](https://cdn.cloudflare.steamstatic.com/steam/apps/220/header.jpg?t=1591063154)](https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/)
+
+Half-life VR mod by maxvollmer
+
+[![Half-Life](https://cdn.akamai.steamstatic.com/steam/apps/70/header.jpg?t=1591048039)](https://store.steampowered.com/app/1908720/HalfLife_VR_Mod/)
 
 
 ## Mods by praydog
@@ -152,10 +155,6 @@ Doom 3 originally by KozGit updates by Fishbiter then NPi2Loup
 Original Doom by Fishbiter
 
 [![Doom](https://cdn.akamai.steamstatic.com/steam/apps/2280/header.jpg?t=1600098964)](https://github.com/Fishbiter/gz3doom)
-
-Half-life VR mod by maxvollmer
-
-[![Half-Life](https://cdn.akamai.steamstatic.com/steam/apps/70/header.jpg?t=1591048039)](https://github.com/maxvollmer/Half-Life-VR/releases/)
 
 Quake mod Quakespasm Orginally by phoboslab forked by Zackin5 then again by Fishbiter
 
