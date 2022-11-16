@@ -89,6 +89,12 @@ Trombone Champ
 
 Trombone Champ VR is currenly pay for access
 
+
+Gunfire Reborn VR mod by Astienth
+
+[![Gunfire Reborn](https://cdn.cloudflare.steamstatic.com/steam/apps/1217060/header.jpg?t=1664195229)](https://github.com/Astienth/gunfire-reborn-bhaptics)
+
+
 GTFO Mod by DSprtn
 
 [![GTFO](https://cdn.akamai.steamstatic.com/steam/apps/493520/header.jpg?t=1635776146)](https://github.com/DSprtn/GTFO_VR_Plugin)
