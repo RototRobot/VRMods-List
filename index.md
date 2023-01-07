@@ -142,6 +142,14 @@ Receiver mod 7DFPS byShadowBrian
 
 [![https://store.steampowered.com/app/1129310/Receiver_2/](https://cdn.akamai.steamstatic.com/steam/apps/1129310/header.jpg?t=1633969361)](https://store.steampowered.com/app/1129310/Receiver_2/)
 
+Kerbal Space Program Mod by JonnyOThan forked from  Vivero 
+
+[![Kerbal](https://cdn.akamai.steamstatic.com/steam/apps/220200/header.jpg?t=1663603925)](https://github.com/JonnyOThan/Kerbal-VR)
+
+Bendy and the Ink Machine by Team Beef
+
+[![Bendy](https://cdn.akamai.steamstatic.com/steam/apps/622650/header.jpg?t=1669217551)](https://github.com/baggyg/BendyVR)
+
 ## Mods by Zolika1351
 
 Saints Row: The Third
