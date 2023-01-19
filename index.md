@@ -184,7 +184,7 @@ The Left 4 Dead 2 VR Mod by sd805
 
 subnautica VR Controlls mod by ihatetn931
 
-[![subnautica](https://cdn.akamai.steamstatic.com/steam/apps/264710/header.jpg?t=1670975847)](ttps://discord.gg/bmBtTycq)
+[![subnautica](https://cdn.akamai.steamstatic.com/steam/apps/264710/header.jpg?t=1670975847)](https://discord.gg/bmBtTycq)
 
 Currently only available from Discord you will need to join the subnautica channel its in the sn-development sub-channel
 
