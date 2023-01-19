@@ -182,11 +182,18 @@ The Left 4 Dead 2 VR Mod by sd805
 
 [![Left 4 Dead 2](https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1630686839)](https://github.com/sd805/l4d2vr)
 
+subnautica VR Controlls mod by ihatetn931
+
+[![subnautica](https://cdn.akamai.steamstatic.com/steam/apps/20900/header.jpg?t=1646335465)](ttps://discord.gg/bmBtTycq)
+
+Currently only available from Discord you will need to join the subnautica channel its in the sn-development sub-channel
+
 Witcher in Virtual Reality by PatrykLoan
 
-[![The Witcher](https://cdn.akamai.steamstatic.com/steam/apps/20900/header.jpg?t=1646335465)](https://www.nexusmods.com/witcher/mods/838)
+[![The Witcher](https://cdn.akamai.steamstatic.com/steam/apps/264710/header.jpg?t=1670975847)](https://www.nexusmods.com/subnautica/mods/173?tab=description)
 
 Not a full mod more like a re-implementation into VR
+
 
 
 
