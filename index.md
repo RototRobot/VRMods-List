@@ -103,6 +103,10 @@ Deep Rock Galactic VR Mod by Alch3m1st
 
 [![Deep Rock Galactic](https://cdn.cloudflare.steamstatic.com/steam/apps/548430/header.jpg?t=1653712740)](https://drg.mod.io/vrg)
 
+Metal: Hellsinger Mod by LivingFray
+
+[![Hellsinger](https://cdn.cloudflare.steamstatic.com/steam/apps/1061910/header.jpg?t=1674222246)](https://www.nexusmods.com/metalhellsinger/mods/12)
+
 Valheim mod by manicmoose99
 
 [![Valheim](https://cdn.akamai.steamstatic.com/steam/apps/892970/header.jpg?t=1636710740)](https://www.nexusmods.com/valheim/mods/847)
