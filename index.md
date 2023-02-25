@@ -221,8 +221,12 @@ Alien: isolation mod MotherVR by Nibre
 
 [![Alien: Isolation](https://cdn.akamai.steamstatic.com/steam/apps/214490/header.jpg?t=1603026039)](https://github.com/Nibre/MotherVR/releases)
 
-## Mods by LukeRoss
+Alba: A Wildlife Adventure VR Mod by wouterpleizier 
 
+[![Alba](https://cdn.cloudflare.steamstatic.com/steam/apps/1337010/header.jpg?t=1658225188)](https://github.com/wouterpleizier/AlbaVR)
+
+
+## Mods by LukeRoss
 
 GTA V VR mods
 
