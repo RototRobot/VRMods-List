@@ -57,7 +57,7 @@ Resident Evil 8
 [![Resident Evil Village](https://cdn.akamai.steamstatic.com/steam/apps/1196590/header.jpg?t=1634882204)](https://github.com/praydog/REFramework)
 
 
-### Mods by praydog Raicuparta
+### Mods by Raicuparta
 
 Two-Forks for Firewatch
 
