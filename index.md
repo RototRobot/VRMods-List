@@ -29,11 +29,17 @@ Table of Contents
 
 [![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
 
-### Half-Life 2 by The Source VR Mod Team	
+### Mods by the Source VR Mod Team	
+
+Half-life 2
 
 [![HL2VR](https://cdn.cloudflare.steamstatic.com/steam/apps/220/header.jpg?t=1591063154)](https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/)
 
+Half-life 2 Episode One
+
 [![HL2VREP1](https://cdn.cloudflare.steamstatic.com/steam/apps/2177750/header.jpg?t=1677657211)](https://store.steampowered.com/app/2177750/HalfLife_2_VR_Mod__Episode_One/)
+
+Half-life 2 Episode Two
 
 [![HL2VREP2](https://cdn.cloudflare.steamstatic.com/steam/apps/2177760/header.jpg?t=1679031783)](https://store.steampowered.com/app/2177760/HalfLife_2_VR_Mod__Episode_Two/)
 
