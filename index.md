@@ -224,6 +224,10 @@ Not a full mod more like a re-implementation into VR
 
 # Headtracked only
 
+Resident Evil 4
+
+[![Resident Evil 4](https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg?t=1678973692)](https://github.com/praydog/REFramework)
+
 #### MechWarrior 5mod by KITT2
 
 [![MechWarrior 5](https://cdn.akamai.steamstatic.com/steam/apps/784080/header.jpg?t=1632152493)](https://www.nexusmods.com/mechwarrior5mercenaries/mods/531)
