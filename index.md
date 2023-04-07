@@ -43,6 +43,10 @@ Half-life 2 Episode Two
 
 [![HL2VREP2](https://cdn.cloudflare.steamstatic.com/steam/apps/2177760/header.jpg?t=1679031783)](https://store.steampowered.com/app/2177760/HalfLife_2_VR_Mod__Episode_Two/)
 
+#### Black Mesa Source VR mod by Ashok0
+
+[![Half-Life](https://cdn.cloudflare.steamstatic.com/steam/apps/362890/header.jpg?t=1666633630)](https://www.nexusmods.com/halflife2episode2/mods/4/)
+
 
 #### Half-life VR mod by maxvollmer
 
