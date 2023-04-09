@@ -228,6 +228,10 @@ Not a full mod more like a re-implementation into VR
 
 # Headtracked only
 
+Crysis VR Mod by fholger
+
+[![Crysis](https://cdn.cloudflare.steamstatic.com/steam/apps/17300/header.jpg?t=1634068265)](https://github.com/fholger/crysis_vrmod)
+
 Resident Evil 4 by Praydog
 
 [![Resident Evil 4](https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg?t=1678973692)](https://github.com/praydog/REFramework)
