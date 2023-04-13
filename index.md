@@ -88,9 +88,7 @@ Hardspace: Shipbreaker
 
 The Stanley Parable: Ultra Deluxe
 
-[![Stanley Parable](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)](https://www.patreon.com/raivr)
-
-Stanley Parable VR is currenly pay for access
+[![Stanley Parable](https://cdn.akamai.steamstatic.com/steam/apps/1703340/header.jpg?t=1654715052)](https://raicuparta.itch.io/stanley-vr)
 
 HeavenVR for Neon White
 
