@@ -226,6 +226,11 @@ Not a full mod more like a re-implementation into VR
 
 # Headtracked only
 
+Descenders VR Mod by Holydh
+
+[![Descenders](https://cdn.akamai.steamstatic.com/steam/apps/681280/header.jpg?t=1667350966)](https://github.com/Holydh/Descenders_VRmod)
+
+
 Crysis VR Mod by fholger
 
 [![Crysis](https://cdn.cloudflare.steamstatic.com/steam/apps/17300/header.jpg?t=1634068265)](https://github.com/fholger/crysis_vrmod)
