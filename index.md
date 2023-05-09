@@ -103,6 +103,11 @@ Trombone Champ
 Trombone Champ VR is currenly pay for access
 
 
+Crysis VR Mod by fholger
+
+[![Crysis](https://cdn.cloudflare.steamstatic.com/steam/apps/17300/header.jpg?t=1634068265)](https://github.com/fholger/crysis_vrmod)
+
+
 #### Gunfire Reborn VR mod by Astienth
 
 [![Gunfire Reborn](https://cdn.cloudflare.steamstatic.com/steam/apps/1217060/header.jpg?t=1664195229)](https://github.com/Astienth/gunfire-reborn-bhaptics)
@@ -230,10 +235,6 @@ Descenders VR Mod by Holydh
 
 [![Descenders](https://cdn.akamai.steamstatic.com/steam/apps/681280/header.jpg?t=1667350966)](https://github.com/Holydh/Descenders_VRmod)
 
-
-Crysis VR Mod by fholger
-
-[![Crysis](https://cdn.cloudflare.steamstatic.com/steam/apps/17300/header.jpg?t=1634068265)](https://github.com/fholger/crysis_vrmod)
 
 Resident Evil 4 by Praydog
 
