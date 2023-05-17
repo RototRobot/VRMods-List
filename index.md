@@ -172,6 +172,10 @@ Raft
 
 [![Kerbal](https://cdn.akamai.steamstatic.com/steam/apps/220200/header.jpg?t=1663603925)](https://github.com/JonnyOThan/Kerbal-VR)
 
+#### Outward VR mod by cybensis
+
+[![Outward](https://cdn.akamai.steamstatic.com/steam/apps/794260/header.jpg?t=1676393902)](https://github.com/cybensis/OutwardVR)
+
 #### Bendy and the Ink Machine by Team Beef
 
 [![Bendy](https://cdn.akamai.steamstatic.com/steam/apps/622650/header.jpg?t=1669217551)](https://github.com/baggyg/BendyVR)
