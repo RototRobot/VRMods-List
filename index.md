@@ -235,6 +235,11 @@ Not a full mod more like a re-implementation into VR
 
 # Headtracked only
 
+Far Cry VR Mod by fholger
+
+[![FarCry](https://cdn.akamai.steamstatic.com/steam/apps/13520/header.jpg?t=1602602361)](https://github.com/fholger/farcry_vrmod)
+
+
 Descenders VR Mod by Holydh
 
 [![Descenders](https://cdn.akamai.steamstatic.com/steam/apps/681280/header.jpg?t=1667350966)](https://github.com/Holydh/Descenders_VRmod)
