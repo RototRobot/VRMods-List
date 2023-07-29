@@ -276,7 +276,7 @@ No One Lives forever 2
 
 [![No One Lives forever 2](https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/69c8c5b08db98c39788c0c5be3f1e8c8.png)](https://github.com/LukeRoss00/nolf2-real-mod)
 
-LukeRoss has also created mods for Cyberpunk 2077, Horizon: Zero Dawn, Mafia I, II, III (DE), Ghostwire: Tokyo, Hogwarts Legacy, High On Life & Atomic Heart however these are paywalled on his patreon. https://www.patreon.com/realvr
+LukeRoss has also created mods for Cyberpunk 2077, Horizon: Zero Dawn, Mafia I, II, III (DE), Ghostwire: Tokyo, Hogwarts Legacy, High On Life, Atomic Heart & Uncharted however these are paywalled on his patreon. https://www.patreon.com/realvr
 
 #### STAR WARS: TIE Fighter mod by AngelTFTC	
 
