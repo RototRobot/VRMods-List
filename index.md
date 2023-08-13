@@ -102,10 +102,15 @@ Trombone Champ
 
 Trombone Champ VR is currenly pay for access
 
+### Mods by fholger
 
-Crysis VR Mod by fholger
+Crysis VR 
 
 [![Crysis](https://cdn.cloudflare.steamstatic.com/steam/apps/17300/header.jpg?t=1634068265)](https://github.com/fholger/crysis_vrmod)
+
+Far Cry VR
+
+[![FarCry](https://cdn.akamai.steamstatic.com/steam/apps/13520/header.jpg?t=1602602361)](https://github.com/fholger/farcry_vrmod)
 
 
 #### Gunfire Reborn VR mod by Astienth
@@ -234,10 +239,6 @@ Not a full mod more like a re-implementation into VR
 
 
 # Headtracked only
-
-Far Cry VR Mod by fholger
-
-[![FarCry](https://cdn.akamai.steamstatic.com/steam/apps/13520/header.jpg?t=1602602361)](https://github.com/fholger/farcry_vrmod)
 
 
 Descenders VR Mod by Holydh
