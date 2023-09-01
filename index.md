@@ -259,10 +259,6 @@ Resident Evil 4 by Praydog
 
 [![MechWarrior 5](https://cdn.akamai.steamstatic.com/steam/apps/784080/header.jpg?t=1632152493)](https://www.nexusmods.com/mechwarrior5mercenaries/mods/531)
 
-#### Subnautica: Below Zero VR mod by elliotttate
-
-[![Subnautica: Below Zero](https://cdn.akamai.steamstatic.com/steam/apps/848450/header.jpg?t=1634085044)](https://www.notion.so/beastsaber/Subnautica-Below-Zero-VR-Mod-08645fc02a1f4d039c2f25bfd515a140)
-
 #### Alien: isolation mod MotherVR by Nibre
 
 [![Alien: Isolation](https://cdn.akamai.steamstatic.com/steam/apps/214490/header.jpg?t=1603026039)](https://github.com/Nibre/MotherVR/releases)
