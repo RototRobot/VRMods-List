@@ -217,11 +217,16 @@ Saints Row (2022) is currently an Epic Exclusive.
 
 [![Left 4 Dead 2](https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1630686839)](https://github.com/sd805/l4d2vr)
 
-#### Subnautica VR Controlls mod by ihatetn931
+#### Subnautica VR Controls mod by Okabintaro
 
-[![subnautica](https://cdn.akamai.steamstatic.com/steam/apps/264710/header.jpg?t=1670975847)](https://discord.gg/bmBtTycq)
+[![subnautica](https://cdn.akamai.steamstatic.com/steam/apps/264710/header.jpg?t=1670975847)](https://github.com/Okabintaro/SubmersedVR)
 
-Currently only available from Discord you will need to join the subnautica channel its in the sn-development sub-channel
+#### Subnautica Below Zero VR Controls mod by jbusfield
+
+[![subnautica](https://cdn.cloudflare.steamstatic.com/steam/apps/848450/header.jpg?t=1663292026)](https://github.com/jbusfield/SubmersedVR)
+
+Video Tutorial on installing [the Mods](https://www.youtube.com/watch?v=935AUfqPI3o)
+
 
 #### Witcher in Virtual Reality by PatrykLoan
 
