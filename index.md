@@ -148,9 +148,14 @@ Raft
 
 [![Raft](https://cdn.akamai.steamstatic.com/steam/apps/648800/header.jpg?t=1655744208)](https://www.raftmodding.com/mods/raftvr)
 
+### Portal 2 VR Mod by Gistix     
+
+[![Portal 2](https://cdn.cloudflare.steamstatic.com/steam/apps/620/header.jpg?t=1683129624)](https://github.com/Gistix/portal2vr)
+
+
 #### Cruelty Squad VR Mod by TEDDYBEAR082
 
-[![Raft](https://cdn.cloudflare.steamstatic.com/steam/apps/1388770/header.jpg?t=1625255421)](https://crus.cc/mod/VR/)
+[![Squad](https://cdn.cloudflare.steamstatic.com/steam/apps/1388770/header.jpg?t=1625255421)](https://crus.cc/mod/VR/)
 
 
 #### Life Is Strange: Before The Storm VR Mod DawnVR by TrevTV
