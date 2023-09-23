@@ -25,10 +25,6 @@ Table of Contents
 
 ---
 
-#### Minecraft mod Vivecraft by jrbudda and Techjar
-
-[![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
-
 ### Mods by the Source VR Mod Team	
 
 Half-life 2
@@ -52,6 +48,21 @@ Half-life 2 Episode Two
 
 [![Half-Life](https://cdn.akamai.steamstatic.com/steam/apps/70/header.jpg?t=1591048039)](https://store.steampowered.com/app/1908720/HalfLife_VR_Mod/)
 
+#### The Left 4 Dead 2 VR Mod by sd805
+
+[![Left 4 Dead 2](https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1630686839)](https://github.com/sd805/l4d2vr)
+
+### Portal 2 VR Mod by Gistix     
+
+[![Portal 2](https://cdn.cloudflare.steamstatic.com/steam/apps/620/header.jpg?t=1683129624)](https://github.com/Gistix/portal2vr)
+
+#### Garry's Mod VR by Catse 
+
+[![Garry's Mod](https://cdn.akamai.steamstatic.com/steam/apps/4000/header.jpg?t=1617307042)](https://steamcommunity.com/sharedfiles/filedetails/?id=1678408548)
+
+#### Minecraft mod Vivecraft by jrbudda and Techjar
+
+[![Minecraft](https://i.imgur.com/9VfVS.png)](http://www.vivecraft.org/)
 
 ### Mods by praydog
 
@@ -70,6 +81,17 @@ Resident Evil 7
 Resident Evil 8
 
 [![Resident Evil Village](https://cdn.akamai.steamstatic.com/steam/apps/1196590/header.jpg?t=1634882204)](https://github.com/praydog/REFramework)
+
+
+### Mods by fholger
+
+Crysis VR 
+
+[![Crysis](https://cdn.cloudflare.steamstatic.com/steam/apps/17300/header.jpg?t=1634068265)](https://github.com/fholger/crysis_vrmod)
+
+Far Cry VR
+
+[![FarCry](https://cdn.akamai.steamstatic.com/steam/apps/13520/header.jpg?t=1602602361)](https://github.com/fholger/farcry_vrmod)
 
 
 ### Mods by Raicuparta
@@ -98,25 +120,13 @@ HeavenVR is currenly pay for access either patreon or Itch.io
 
 Trombone Champ
 
-[![Trombone Champ](https://cdn.cloudflare.steamstatic.com/steam/apps/1059990/header.jpg?t=1663352178)](https://www.patreon.com/raivr)
+[![Trombone Champ](https://cdn.cloudflare.steamstatic.com/steam/apps/1059990/header.jpg?t=1663352178)](https://raicuparta.itch.io/baboon-vr)
 
 Trombone Champ VR is currenly pay for access
-
-### Mods by fholger
-
-Crysis VR 
-
-[![Crysis](https://cdn.cloudflare.steamstatic.com/steam/apps/17300/header.jpg?t=1634068265)](https://github.com/fholger/crysis_vrmod)
-
-Far Cry VR
-
-[![FarCry](https://cdn.akamai.steamstatic.com/steam/apps/13520/header.jpg?t=1602602361)](https://github.com/fholger/farcry_vrmod)
-
 
 #### Gunfire Reborn VR mod by Astienth
 
 [![Gunfire Reborn](https://cdn.cloudflare.steamstatic.com/steam/apps/1217060/header.jpg?t=1664195229)](https://github.com/Astienth/gunfire-reborn-bhaptics)
-
 
 #### GTFO Mod by DSprtn
 
@@ -134,10 +144,6 @@ Far Cry VR
 
 [![Valheim](https://cdn.akamai.steamstatic.com/steam/apps/892970/header.jpg?t=1636710740)](https://www.nexusmods.com/valheim/mods/847)
 
-#### Garry's Mod VR by Catse 
-
-[![Garry's Mod](https://cdn.akamai.steamstatic.com/steam/apps/4000/header.jpg?t=1617307042)](https://steamcommunity.com/sharedfiles/filedetails/?id=1678408548)
-
 ### Mods by DrBibop
 
 Risk of Rain 2
@@ -147,14 +153,6 @@ Risk of Rain 2
 Raft
 
 [![Raft](https://cdn.akamai.steamstatic.com/steam/apps/648800/header.jpg?t=1655744208)](https://www.raftmodding.com/mods/raftvr)
-
-#### The Left 4 Dead 2 VR Mod by sd805
-
-[![Left 4 Dead 2](https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1630686839)](https://github.com/sd805/l4d2vr)
-
-### Portal 2 VR Mod by Gistix     
-
-[![Portal 2](https://cdn.cloudflare.steamstatic.com/steam/apps/620/header.jpg?t=1683129624)](https://github.com/Gistix/portal2vr)
 
 #### Cruelty Squad VR Mod by TEDDYBEAR082
 
@@ -220,8 +218,6 @@ Saints Row (2022) is currently an Epic Exclusive.
 
 [![QUAKE](https://cdn.akamai.steamstatic.com/steam/apps/2310/header.jpg?t=1629481608)](https://github.com/vittorioromeo/quakevr)
 
-
-
 #### Subnautica VR Controls mod by Okabintaro
 
 [![subnautica](https://cdn.akamai.steamstatic.com/steam/apps/264710/header.jpg?t=1670975847)](https://github.com/Okabintaro/SubmersedVR)
@@ -232,13 +228,11 @@ Saints Row (2022) is currently an Epic Exclusive.
 
 Video Tutorial on installing [the Mods](https://www.youtube.com/watch?v=935AUfqPI3o)
 
-
 #### Witcher in Virtual Reality by PatrykLoan
 
 [![The Witcher](https://cdn.akamai.steamstatic.com/steam/apps/20900/header.jpg?t=1659616192)](https://www.nexusmods.com/witcher/mods/838)
 
 Not a full mod more like a re-implementation into VR
-
 
 
 # Motion Gestures
@@ -250,12 +244,6 @@ Not a full mod more like a re-implementation into VR
 
 # Headtracked only
 
-
-Descenders VR Mod by Holydh
-
-[![Descenders](https://cdn.akamai.steamstatic.com/steam/apps/681280/header.jpg?t=1667350966)](https://github.com/Holydh/Descenders_VRmod)
-
-
 Resident Evil 4 by Praydog
 
 [![Resident Evil 4](https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg?t=1678973692)](https://github.com/praydog/REFramework)
@@ -264,14 +252,30 @@ Resident Evil 4 by Praydog
 
 [![MechWarrior 5](https://cdn.akamai.steamstatic.com/steam/apps/784080/header.jpg?t=1632152493)](https://www.nexusmods.com/mechwarrior5mercenaries/mods/531)
 
-#### Alien: isolation mod MotherVR by Nibre
+#### Yooka-Laylee Mod VookaRaylee by Eusth
 
-[![Alien: Isolation](https://cdn.akamai.steamstatic.com/steam/apps/214490/header.jpg?t=1603026039)](https://github.com/Nibre/MotherVR/releases)
+[![Yooka-Laylee](https://cdn.akamai.steamstatic.com/steam/apps/360830/header.jpg?t=1628161572)](https://github.com/Eusth/VookaRaylee)
+
+#### Spyro Reignited Trilogy VR mod by Arman Haçikoğlu 
+
+[![Spyro](https://cdn.akamai.steamstatic.com/steam/apps/996580/header.jpg?t=1588789018)](https://github.com/InfinateXtremer/ReignitedVRMod/releases)
+
+#### Kerbal Space program VR by Vivero
+
+[![Kerbal Space program](https://cdn.akamai.steamstatic.com/steam/apps/220200/header.jpg?t=1624555019)](https://github.com/Vivero/Kerbal-VR)
+
+
+Descenders VR Mod by Holydh
+
+[![Descenders](https://cdn.akamai.steamstatic.com/steam/apps/681280/header.jpg?t=1667350966)](https://github.com/Holydh/Descenders_VRmod)
 
 #### Alba: A Wildlife Adventure VR Mod by wouterpleizier 
 
 [![Alba](https://cdn.cloudflare.steamstatic.com/steam/apps/1337010/header.jpg?t=1658225188)](https://github.com/wouterpleizier/AlbaVR)
 
+#### STAR WARS: TIE Fighter mod by AngelTFTC	
+
+[![STAR WARS: TIE Fighter](https://cdn.akamai.steamstatic.com/steam/apps/355250/header.jpg?t=1586467354)](https://www.moddb.com/mods/tie-fighter-total-conversion-tftc)
 
 ### Mods by LukeRoss
 
@@ -285,21 +289,9 @@ No One Lives forever 2
 
 LukeRoss has also created mods for Cyberpunk 2077, Horizon: Zero Dawn, Mafia I, II, III (DE), Ghostwire: Tokyo, Hogwarts Legacy, High On Life, Atomic Heart & Uncharted however these are paywalled on his patreon. https://www.patreon.com/realvr
 
-#### STAR WARS: TIE Fighter mod by AngelTFTC	
+#### Alien: isolation mod MotherVR by Nibre
 
-[![STAR WARS: TIE Fighter](https://cdn.akamai.steamstatic.com/steam/apps/355250/header.jpg?t=1586467354)](https://www.moddb.com/mods/tie-fighter-total-conversion-tftc)
-
-#### Yooka-Laylee Mod VookaRaylee by Eusth
-
-[![Yooka-Laylee](https://cdn.akamai.steamstatic.com/steam/apps/360830/header.jpg?t=1628161572)](https://github.com/Eusth/VookaRaylee)
-
-#### Spyro Reignited Trilogy VR mod by Arman Haçikoğlu 
-
-[![Spyro](https://cdn.akamai.steamstatic.com/steam/apps/996580/header.jpg?t=1588789018)](https://github.com/InfinateXtremer/ReignitedVRMod/releases)
-
-#### Kerbal Space program VR by Vivero
-
-[![Kerbal Space program](https://cdn.akamai.steamstatic.com/steam/apps/220200/header.jpg?t=1624555019)](https://github.com/Vivero/Kerbal-VR)
+[![Alien: Isolation](https://cdn.akamai.steamstatic.com/steam/apps/214490/header.jpg?t=1603026039)](https://github.com/Nibre/MotherVR/releases)
 
 #### Stray VR mod by Jessica Natalia
 
