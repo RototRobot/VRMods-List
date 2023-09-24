@@ -234,6 +234,10 @@ Video Tutorial on installing [the Mods](https://www.youtube.com/watch?v=935AUfqP
 
 Not a full mod more like a re-implementation into VR
 
+#### Iron Lung VR (Technically not a mod but a ground-up recreation)
+
+[![Iron Ling](https://cdn.cloudflare.steamstatic.com/steam/apps/1846170/header.jpg?t=1688659208)](https://jackaapacka.itch.io/iron-lung-vr)
+
 
 # Motion Gestures
 
