@@ -31,6 +31,8 @@ Half-life 2
 
 [![HL2VR](https://cdn.cloudflare.steamstatic.com/steam/apps/220/header.jpg?t=1591063154)](https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/)
 
+Vittorio Romeo also has an [awesome fork with extra features](https://github.com/vittorioromeo/HL2VRU)
+
 Half-life 2 Episode One
 
 [![HL2VREP1](https://cdn.cloudflare.steamstatic.com/steam/apps/2177750/header.jpg?t=1677657211)](https://store.steampowered.com/app/2177750/HalfLife_2_VR_Mod__Episode_One/)
