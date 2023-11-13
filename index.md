@@ -130,6 +130,10 @@ Trombone Champ VR is currenly pay for access
 
 [![Gunfire Reborn](https://cdn.cloudflare.steamstatic.com/steam/apps/1217060/header.jpg?t=1664195229)](https://github.com/Astienth/gunfire-reborn-bhaptics)
 
+#### Sclerosis an Amnesia VR remake Mod by CreaTeam
+
+[![Amnesia](https://cdn.cloudflare.steamstatic.com/steam/apps/57300/header.jpg?t=1685699016)](https://www.moddb.com/mods/sclerosis-an-amnesia-vr-remake)
+
 #### GTFO Mod by DSprtn
 
 [![GTFO](https://cdn.akamai.steamstatic.com/steam/apps/493520/header.jpg?t=1635776146)](https://github.com/DSprtn/GTFO_VR_Plugin)
