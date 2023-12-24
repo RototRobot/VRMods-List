@@ -126,6 +126,13 @@ Trombone Champ
 
 Trombone Champ VR is currenly pay for access
 
+#### Jedi Knight VR mod by DrBeef
+
+[![Jedi Knight](https://cdn.akamai.steamstatic.com/steam/apps/6020/header.jpg?t=1586462966)](https://github.com/DrBeef/JKXR)
+
+[![Jedi Knight II](https://cdn.akamai.steamstatic.com/steam/apps/6030/header.jpg?t=1586465683)](https://github.com/DrBeef/JKXR)
+
+
 #### Gunfire Reborn VR mod by Astienth
 
 [![Gunfire Reborn](https://cdn.cloudflare.steamstatic.com/steam/apps/1217060/header.jpg?t=1664195229)](https://github.com/Astienth/gunfire-reborn-bhaptics)
