@@ -84,6 +84,11 @@ Resident Evil 8
 
 [![Resident Evil Village](https://cdn.akamai.steamstatic.com/steam/apps/1196590/header.jpg?t=1634882204)](https://github.com/praydog/REFramework)
 
+Universal Unreal Engine VR Mod
+
+[![UUEVRMOD](https://i.imgur.com/dXHv1VZ.jpg)](https://github.com/praydog/UEVR)
+
+This mod enables VR in a lot of Games see [Guide for details](https://beastsaber.notion.site/beastsaber/Praydog-s-UEVR-Beta-Getting-Started-Guide-4c4d94ecf8cf4933b04ac362411a930e)
 
 ### Mods by fholger
 
