@@ -154,6 +154,11 @@ Trombone Champ VR is currenly pay for access
 
 [![Deep Rock Galactic](https://cdn.cloudflare.steamstatic.com/steam/apps/548430/header.jpg?t=1653712740)](https://drg.mod.io/vrg)
 
+#### Lethal Company VR Mod by DaXcess
+
+[![Lethal](https://cdn.akamai.steamstatic.com/steam/apps/1966720/header.jpg?t=1700231592)](https://thunderstore.io/c/lethal-company/p/DaXcess/LethalCompanyVR/)
+
+
 #### Metal: Hellsinger Mod by LivingFray
 
 [![Hellsinger](https://cdn.cloudflare.steamstatic.com/steam/apps/1061910/header.jpg?t=1674222246)](https://www.nexusmods.com/metalhellsinger/mods/12)
