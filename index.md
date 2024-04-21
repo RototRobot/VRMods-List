@@ -181,6 +181,10 @@ Raft
 
 [![Squad](https://cdn.cloudflare.steamstatic.com/steam/apps/1388770/header.jpg?t=1625255421)](https://crus.cc/mod/VR/)
 
+#### We Were Here VR Mod by  LokiusV
+
+[![Here](https://cdn.cloudflare.steamstatic.com/steam/apps/582500/header.jpg?t=1709541416)](https://github.com/LokiusV/WeWereInVR)
+
 #### Life Is Strange: Before The Storm VR Mod DawnVR by TrevTV
  
 [![Life Is Strange](https://cdn.cloudflare.steamstatic.com/steam/apps/554620/header.jpg?t=1637335403)](https://github.com/TrevTV/DawnVR)
