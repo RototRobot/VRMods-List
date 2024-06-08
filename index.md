@@ -84,11 +84,6 @@ Resident Evil 8
 
 [![Resident Evil Village](https://cdn.akamai.steamstatic.com/steam/apps/1196590/header.jpg?t=1634882204)](https://github.com/praydog/REFramework)
 
-Universal Unreal Engine VR Mod
-
-[![UUEVRMOD](https://i.imgur.com/dXHv1VZ.jpg)](https://github.com/praydog/UEVR)
-
-This mod enables VR in a lot of Games see [Guide for details](https://beastsaber.notion.site/beastsaber/Praydog-s-UEVR-Beta-Getting-Started-Guide-4c4d94ecf8cf4933b04ac362411a930e)
 
 ### Mods by fholger
 
@@ -157,6 +152,10 @@ Trombone Champ VR is currenly pay for access
 #### Lethal Company VR Mod by DaXcess
 
 [![Lethal](https://cdn.akamai.steamstatic.com/steam/apps/1966720/header.jpg?t=1700231592)](https://thunderstore.io/c/lethal-company/p/DaXcess/LethalCompanyVR/)
+
+#### We Were Here VR Mod by LokiusV
+
+[![Wewerehere](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582500/header.jpg?t=1709541416)](https://github.com/LokiusV/WeWereInVR)
 
 
 #### Metal: Hellsinger Mod by LivingFray
@@ -345,6 +344,12 @@ LukeRoss has also created mods for Cyberpunk 2077, Horizon: Zero Dawn, Mafia I, 
 [![Sonic](https://i.imgur.com/jTYgbGG.jpg)](https://mb.srb2.org/addons/srb2-vr-mod.3559/)
 
 # VR Injector tools
+
+Universal Unreal Engine VR Mod by Ppaydog
+
+[![UUEVRMOD](https://i.imgur.com/dXHv1VZ.jpg)](https://github.com/praydog/UEVR)
+
+More Powerful than a traditional VR injector and can add 6DOF controller support read: [Guide for details](https://beastsaber.notion.site/beastsaber/Praydog-s-UEVR-Beta-Getting-Started-Guide-4c4d94ecf8cf4933b04ac362411a930e)
 
 #### Geo3D by Flugan
 
