@@ -216,6 +216,10 @@ Raft
 
 [![Bendy](https://cdn.akamai.steamstatic.com/steam/apps/622650/header.jpg?t=1669217551)](https://github.com/baggyg/BendyVR)
 
+#### 7 Days to Die by Kaaliba and Necro 
+
+[![Bendy](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251570/header.jpg?t=1721925235)](https://www.nexusmods.com/7daystodie/mods/3011?tab=description)
+
 ### Mods by Zolika1351
 
 Saints Row: The Third
