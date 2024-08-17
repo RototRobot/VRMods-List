@@ -150,11 +150,6 @@ Trombone Champ
 [![Dredge](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1562430/header_alt_assets_0.jpg?t=1723814488)](https://dredgemods.com/mods/dredge_vr/)
 
 
-#### We Were Here VR Mod by LokiusV
-
-[![Wewerehere](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582500/header.jpg?t=1709541416)](https://github.com/LokiusV/WeWereInVR)
-
-
 #### Metal: Hellsinger Mod by LivingFray
 
 [![Hellsinger](https://cdn.cloudflare.steamstatic.com/steam/apps/1061910/header.jpg?t=1674222246)](https://www.nexusmods.com/metalhellsinger/mods/12)
