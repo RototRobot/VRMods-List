@@ -281,7 +281,7 @@ Not a full mod more like a re-implementation into VR
 
 [![Cyberpunk 2077](https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1621944801)](https://www.vorpx.com/cyberpunk-vr-download/)
 
-#### World of Warcraft VR Mod mod by ProjectMimer
+#### World of Warcraft VR Mod by ProjectMimer
 
 [![WoW](https://i.imgur.com/ty1Cvct.jpeg)](https://github.com/ProjectMimer/WoVR)
 
