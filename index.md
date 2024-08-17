@@ -246,6 +246,8 @@ Saints Row (2022) is currently an Epic Exclusive.
 
 [![Doom](https://cdn.akamai.steamstatic.com/steam/apps/2280/header.jpg?t=1600098964)](https://github.com/Fishbiter/gz3doom)
 
+Updated GZDoom fork by [hh79 available here](https://github.com/hh79/gzdoomvr) 
+
 #### Quake mod Quakespasm Orginally by phoboslab forked by Zackin5 then again by Fishbiter
 
 [![QUAKE](https://cdn.akamai.steamstatic.com/steam/apps/2310/header.jpg?t=1629481608)](https://github.com/Fishbiter/Quakespasm-OpenVR)
