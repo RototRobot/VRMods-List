@@ -402,11 +402,19 @@ LukeRoss has also created mods for Cyberpunk 2077, Horizon: Zero Dawn, Mafia I, 
 
 # VR Injector tools
 
-Universal Unreal Engine VR Mod by Ppaydog
+Universal Unreal Engine VR Mod by Praydog
 
 [![UUEVRMOD](https://i.imgur.com/dXHv1VZ.jpg)](https://github.com/praydog/UEVR)
 
-More Powerful than a traditional VR injector and can add 6DOF controller support read: [Guide for details](https://beastsaber.notion.site/beastsaber/Praydog-s-UEVR-Beta-Getting-Started-Guide-4c4d94ecf8cf4933b04ac362411a930e)
+This adds VR to hundreds of Unreal 4 and 5 engine games and is more Powerful than a traditional VR injector and can add 6DOF controller support read: [Guide for details](https://beastsaber.notion.site/beastsaber/Praydog-s-UEVR-Beta-Getting-Started-Guide-4c4d94ecf8cf4933b04ac362411a930e)
+here is a stire for some [premade user mod profiles](https://uevr-profiles.com/)
+
+Universal Unity VR Mod by Raicuparta
+
+[![UUVRMOD](https://i.imgur.com/rk517P3.jpeg)](https://github.com/Raicuparta/uuvr)
+
+This adds VR to hundreds of Unity games and is more Powerful than a traditional VR injector.
+
 
 #### Geo3D by Flugan
 
