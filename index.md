@@ -129,9 +129,9 @@ Trombone Champ
 [![Jedi Knight II](https://cdn.akamai.steamstatic.com/steam/apps/6030/header.jpg?t=1586465683)](https://github.com/DrBeef/JKXR)
 
 
-#### Gunfire Reborn VR mod by Astienth
+#### Gunfire Reborn VR mod by PureDark
 
-[![Gunfire Reborn](https://cdn.cloudflare.steamstatic.com/steam/apps/1217060/header.jpg?t=1664195229)](https://github.com/Astienth/gunfire-reborn-bhaptics)
+[![Gunfire Reborn](https://cdn.cloudflare.steamstatic.com/steam/apps/1217060/header.jpg?t=1664195229)](https://github.com/xPrinny/GunfireRebornVRMod)
 
 #### Sclerosis an Amnesia VR remake Mod by CreaTeam
 
