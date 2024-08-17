@@ -124,8 +124,6 @@ Trombone Champ
 
 [![Trombone Champ](https://cdn.cloudflare.steamstatic.com/steam/apps/1059990/header.jpg?t=1663352178)](https://raicuparta.itch.io/baboon-vr)
 
-Trombone Champ VR is currenly pay for access
-
 #### Jedi Knight VR mod by DrBeef
 
 [![Jedi Knight](https://cdn.akamai.steamstatic.com/steam/apps/6020/header.jpg?t=1586462966)](https://github.com/DrBeef/JKXR)
