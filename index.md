@@ -214,7 +214,21 @@ Raft
 
 #### 7 Days to Die by Kaaliba and Necro 
 
-[![Bendy](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251570/header.jpg?t=1721925235)](https://www.nexusmods.com/7daystodie/mods/3011?tab=description)
+[![7day](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251570/header.jpg?t=1721925235)](https://www.nexusmods.com/7daystodie/mods/3011?tab=description)
+
+### Mods by DaXcess
+
+Content Warning VR mod
+
+[![CW](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2881650/header.jpg?t=1723198595)](https://github.com/DaXcess/CWVR)
+
+Lethal Company VR Mod
+
+[![LC](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg?t=1700231592)](https://github.com/DaXcess/LCVR)
+
+### Techtonica VR mod by Xenira 
+
+[![Tech](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1457320/header.jpg?t=1719326407)](https://github.com/Xenira/TechtonicaVR)
 
 ### Mods by Zolika1351
 
