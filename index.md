@@ -284,11 +284,52 @@ Not a full mod more like a re-implementation into VR
 
 # Headtracked only
 
-Resident Evil 4 by Praydog
+
+
+### Mods by praydog
+
+Resident Evil
 
 [![Resident Evil 4](https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg?t=1678973692)](https://github.com/praydog/REFramework)
 
-#### MechWarrior 5mod by KITT2
+
+Devil May Cry 5
+
+[![Devil May Cry 5](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/header.jpg?t=1701395090)](https://github.com/praydog/REFramework)
+
+
+Street Fighter 6
+
+[![Street Fighter 6](https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1364780/header.jpg?t=1723710935)](https://github.com/praydog/REFramework)
+
+
+Monster Hunter Rise
+
+[![Monster Hunter Rise](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1446780/header.jpg?t=1715075183)](https://github.com/praydog/REFramework)
+
+Dragon's Dogma 2
+
+[![Dragon's Dogma 2](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2054970/header.jpg?t=1721347707)](https://github.com/praydog/REFramework)
+
+Ghosts 'n Goblins Resurrection
+
+[![GnG](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1375400/header.jpg?t=1644219357)](https://github.com/praydog/REFramework)
+
+Apollo Justice: Ace Attorney Trilogy
+
+[![Justice](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2187220/header.jpg?t=1721102773)](https://github.com/praydog/REFramework)
+
+Kunitsu-Gami: Path of the Goddess
+
+[![Kunitsu-Gami: Path of the Goddess](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2510710/header.jpg?t=1723734797)](https://github.com/praydog/REFramework)
+
+
+#### Freespace 2 VR mod
+
+[![FS2](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/273620/header.jpg?t=1668561070)](https://wiki.hard-light.net/index.php/Virtual_Reality)
+
+
+#### MechWarrior 5 mod by KITT2
 
 [![MechWarrior 5](https://cdn.akamai.steamstatic.com/steam/apps/784080/header.jpg?t=1632152493)](https://www.nexusmods.com/mechwarrior5mercenaries/mods/531)
 
