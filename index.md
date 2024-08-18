@@ -31,7 +31,7 @@ Half-life 2
 
 [![HL2VR](https://cdn.cloudflare.steamstatic.com/steam/apps/220/header.jpg?t=1591063154)](https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/)
 
-Vittorio Romeo also has an [awesome fork with extra features](https://github.com/vittorioromeo/HL2VRU)
+- Vittorio Romeo also has an [awesome fork with extra features](https://github.com/vittorioromeo/HL2VRU)
 
 Half-life 2 Episode One
 
@@ -45,6 +45,7 @@ Half-life 2 Episode Two
 
 [![Half-Life](https://cdn.cloudflare.steamstatic.com/steam/apps/362890/header.jpg?t=1666633630)](https://www.nexusmods.com/halflife2episode2/mods/4/)
 
+- This is based on an the older version of Black Mesa.
 
 #### Half-life VR mod by maxvollmer
 
@@ -57,6 +58,9 @@ Half-life 2 Episode Two
 ### Portal 2 VR Mod by Gistix     
 
 [![Portal 2](https://cdn.cloudflare.steamstatic.com/steam/apps/620/header.jpg?t=1683129624)](https://github.com/Gistix/portal2vr)
+
+ - At time of writting (2024/08/18) the mod has not been updated to the latest build of the game you may need to [rollback to an older build](https://www.makeuseof.com/how-to-downgrade-steam-games/)
+ - Current build I have found working is the April 26 2023 build, download the Deposits 622 and 624 and add override files in base game folder
 
 #### Garry's Mod VR by Catse 
 
@@ -122,24 +126,21 @@ Trombone Champ
 
 [![Trombone Champ](https://cdn.cloudflare.steamstatic.com/steam/apps/1059990/header.jpg?t=1663352178)](https://raicuparta.itch.io/baboon-vr)
 
-#### Jedi Knight VR mod by DrBeef
+### Mods by Team Beef
+
+Jedi Knight VR mod
 
 [![Jedi Knight](https://cdn.akamai.steamstatic.com/steam/apps/6020/header.jpg?t=1586462966)](https://github.com/DrBeef/JKXR)
 
 [![Jedi Knight II](https://cdn.akamai.steamstatic.com/steam/apps/6030/header.jpg?t=1586465683)](https://github.com/DrBeef/JKXR)
 
+Bendy and the Ink Machine VR Mod
 
-#### Gunfire Reborn VR mod by PureDark
+[![Bendy](https://cdn.akamai.steamstatic.com/steam/apps/622650/header.jpg?t=1669217551)](https://github.com/baggyg/BendyVR)
 
-[![Gunfire Reborn](https://cdn.cloudflare.steamstatic.com/steam/apps/1217060/header.jpg?t=1664195229)](https://github.com/xPrinny/GunfireRebornVRMod)
+#### We Were Here VR Mod by  LokiusV
 
-#### Sclerosis an Amnesia VR remake Mod by CreaTeam
-
-[![Amnesia](https://cdn.cloudflare.steamstatic.com/steam/apps/57300/header.jpg?t=1685699016)](https://www.moddb.com/mods/sclerosis-an-amnesia-vr-remake)
-
-#### GTFO Mod by DSprtn
-
-[![GTFO](https://cdn.akamai.steamstatic.com/steam/apps/493520/header.jpg?t=1635776146)](https://github.com/DSprtn/GTFO_VR_Plugin)
+[![Here](https://cdn.cloudflare.steamstatic.com/steam/apps/582500/header.jpg?t=1709541416)](https://github.com/LokiusV/WeWereInVR)
 
 #### Deep Rock Galactic VR Mod by Alch3m1st
 
@@ -149,7 +150,6 @@ Trombone Champ
 
 [![Dredge](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1562430/header_alt_assets_0.jpg?t=1723814488)](https://dredgemods.com/mods/dredge_vr/)
 
-
 #### Metal: Hellsinger Mod by LivingFray
 
 [![Hellsinger](https://cdn.cloudflare.steamstatic.com/steam/apps/1061910/header.jpg?t=1674222246)](https://www.nexusmods.com/metalhellsinger/mods/12)
@@ -157,6 +157,10 @@ Trombone Champ
 #### Valheim mod by manicmoose99
 
 [![Valheim](https://cdn.akamai.steamstatic.com/steam/apps/892970/header.jpg?t=1636710740)](https://www.nexusmods.com/valheim/mods/847)
+
+#### GTFO Mod by DSprtn
+
+[![GTFO](https://cdn.akamai.steamstatic.com/steam/apps/493520/header.jpg?t=1635776146)](https://github.com/DSprtn/GTFO_VR_Plugin)
 
 ### Mods by DrBibop
 
@@ -168,21 +172,38 @@ Raft
 
 [![Raft](https://cdn.akamai.steamstatic.com/steam/apps/648800/header.jpg?t=1655744208)](https://www.raftmodding.com/mods/raftvr)
 
+
+#### Doom 3 originally by KozGit updates by Fishbiter then NPi2Loup
+
+[![DOOM 3](https://cdn.akamai.steamstatic.com/steam/apps/208200/header.jpg?t=1569960032)](https://github.com/NPi2Loup/DOOM-3-BFG-VR)
+
+#### Original Doom by Fishbiter
+
+[![Doom](https://cdn.akamai.steamstatic.com/steam/apps/2280/header.jpg?t=1600098964)](https://github.com/Fishbiter/gz3doom)
+
+Updated GZDoom fork by [hh79 available here](https://github.com/hh79/gzdoomvr) 
+
+#### QuakeVR mod by vittorioromeo
+
+[![QUAKE](https://cdn.akamai.steamstatic.com/steam/apps/2310/header.jpg?t=1629481608)](https://github.com/vittorioromeo/quakevr)
+
+- Vittorio's mod is newer/ more complete I would recommend this one, but try both to find your preference.
+
+#### Quake mod Quakespasm orginally by phoboslab forked by Zackin5 then again by Fishbiter
+
+[![QUAKE](https://cdn.akamai.steamstatic.com/steam/apps/2310/header.jpg?t=1629481608)](https://github.com/Fishbiter/Quakespasm-OpenVR)
+
 #### Cruelty Squad VR Mod by TEDDYBEAR082
 
 [![Squad](https://cdn.cloudflare.steamstatic.com/steam/apps/1388770/header.jpg?t=1625255421)](https://crus.cc/mod/VR/)
 
-#### We Were Here VR Mod by  LokiusV
+#### Penumbra VR mod by veryjos
 
-[![Here](https://cdn.cloudflare.steamstatic.com/steam/apps/582500/header.jpg?t=1709541416)](https://github.com/LokiusV/WeWereInVR)
+[![Penumbra](https://cdn.akamai.steamstatic.com/steam/apps/22180/header.jpg?t=1617809968)](https://github.com/newyork167/penumbra_vr)
 
 #### Life Is Strange: Before The Storm VR Mod DawnVR by TrevTV
  
 [![Life Is Strange](https://cdn.cloudflare.steamstatic.com/steam/apps/554620/header.jpg?t=1637335403)](https://github.com/TrevTV/DawnVR)
-
-#### Penumbra VR mod by veryjos
-
-[![Penumbra](https://cdn.akamai.steamstatic.com/steam/apps/22180/header.jpg?t=1617809968)](https://github.com/newyork167/penumbra_vr)
 
 #### Star wars Jedi Outcast and Jedi Academy VR mods by xLAva 
 
@@ -194,19 +215,15 @@ Raft
 
 [![Receiver](https://cdn.akamai.steamstatic.com/steam/apps/234190/header.jpg?t=1586267903)](https://github.com/ShadowBrian/7DFPS)
 
-[![https://store.steampowered.com/app/1129310/Receiver_2/](https://cdn.akamai.steamstatic.com/steam/apps/1129310/header.jpg?t=1633969361)](https://store.steampowered.com/app/1129310/Receiver_2/)
+[![Receiver2](https://cdn.akamai.steamstatic.com/steam/apps/1129310/header.jpg?t=1633969361)](https://store.steampowered.com/app/1129310/Receiver_2/)
 
-#### Kerbal Space Program Mod by JonnyOThan forked from  Vivero 
+#### Kerbal Space Program Mod by JonnyOThan forked from Vivero 
 
 [![Kerbal](https://cdn.akamai.steamstatic.com/steam/apps/220200/header.jpg?t=1663603925)](https://github.com/JonnyOThan/Kerbal-VR)
 
 #### Outward VR mod by cybensis
 
 [![Outward](https://cdn.akamai.steamstatic.com/steam/apps/794260/header.jpg?t=1676393902)](https://github.com/cybensis/OutwardVR)
-
-#### Bendy and the Ink Machine by Team Beef
-
-[![Bendy](https://cdn.akamai.steamstatic.com/steam/apps/622650/header.jpg?t=1669217551)](https://github.com/baggyg/BendyVR)
 
 #### 7 Days to Die by Kaaliba and Necro 
 
@@ -238,23 +255,16 @@ Saints Row (2022)
 
 Saints Row (2022) is currently an Epic Exclusive.
 
-#### Doom 3 originally by KozGit updates by Fishbiter then NPi2Loup
 
-[![DOOM 3](https://cdn.akamai.steamstatic.com/steam/apps/208200/header.jpg?t=1569960032)](https://github.com/NPi2Loup/DOOM-3-BFG-VR)
+#### Gunfire Reborn VR mod by PureDark
 
-#### Original Doom by Fishbiter
+[![Gunfire Reborn](https://cdn.cloudflare.steamstatic.com/steam/apps/1217060/header.jpg?t=1664195229)](https://github.com/xPrinny/GunfireRebornVRMod)
 
-[![Doom](https://cdn.akamai.steamstatic.com/steam/apps/2280/header.jpg?t=1600098964)](https://github.com/Fishbiter/gz3doom)
+ - At time of writting (2024/08/18) the mod has not been updated to the latest build of the game you may need to [rollback to an older build](https://www.makeuseof.com/how-to-downgrade-steam-games/)
 
-Updated GZDoom fork by [hh79 available here](https://github.com/hh79/gzdoomvr) 
+#### Sclerosis an Amnesia VR remake Mod by CreaTeam
 
-#### Quake mod Quakespasm Orginally by phoboslab forked by Zackin5 then again by Fishbiter
-
-[![QUAKE](https://cdn.akamai.steamstatic.com/steam/apps/2310/header.jpg?t=1629481608)](https://github.com/Fishbiter/Quakespasm-OpenVR)
-
-#### QuakeVR mod by vittorioromeo
-
-[![QUAKE](https://cdn.akamai.steamstatic.com/steam/apps/2310/header.jpg?t=1629481608)](https://github.com/vittorioromeo/quakevr)
+[![Amnesia](https://cdn.cloudflare.steamstatic.com/steam/apps/57300/header.jpg?t=1685699016)](https://www.moddb.com/mods/sclerosis-an-amnesia-vr-remake)
 
 #### Subnautica VR Controls mod by Okabintaro
 
@@ -277,6 +287,8 @@ Not a full mod more like a re-implementation into VR
 [![Iron Ling](https://cdn.cloudflare.steamstatic.com/steam/apps/1846170/header.jpg?t=1688659208)](https://jackaapacka.itch.io/iron-lung-vr)
 
 
+
+
 # Motion Gestures
 
 #### Cyberpunk 2077 VR mod by vorpx
@@ -288,9 +300,9 @@ Not a full mod more like a re-implementation into VR
 [![WoW](https://i.imgur.com/ty1Cvct.jpeg)](https://github.com/ProjectMimer/WoVR)
 
 
+
+
 # Headtracked only
-
-
 
 ### Mods by praydog
 
@@ -298,16 +310,13 @@ Resident Evil
 
 [![Resident Evil 4](https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg?t=1678973692)](https://github.com/praydog/REFramework)
 
-
 Devil May Cry 5
 
 [![Devil May Cry 5](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/header.jpg?t=1701395090)](https://github.com/praydog/REFramework)
 
-
 Street Fighter 6
 
 [![Street Fighter 6](https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1364780/header.jpg?t=1723710935)](https://github.com/praydog/REFramework)
-
 
 Monster Hunter Rise
 
@@ -334,7 +343,6 @@ Kunitsu-Gami: Path of the Goddess
 
 [![FS2](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/273620/header.jpg?t=1668561070)](https://wiki.hard-light.net/index.php/Virtual_Reality)
 
-
 #### MechWarrior 5 mod by KITT2
 
 [![MechWarrior 5](https://cdn.akamai.steamstatic.com/steam/apps/784080/header.jpg?t=1632152493)](https://www.nexusmods.com/mechwarrior5mercenaries/mods/531)
@@ -350,7 +358,6 @@ Kunitsu-Gami: Path of the Goddess
 #### Kerbal Space program VR by Vivero
 
 [![Kerbal Space program](https://cdn.akamai.steamstatic.com/steam/apps/220200/header.jpg?t=1624555019)](https://github.com/Vivero/Kerbal-VR)
-
 
 Descenders VR Mod by Holydh
 
@@ -414,7 +421,6 @@ Universal Unity VR Mod by Raicuparta
 [![UUVRMOD](https://i.imgur.com/rk517P3.jpeg)](https://github.com/Raicuparta/uuvr)
 
 This adds VR to hundreds of Unity games and is more Powerful than a traditional VR injector.
-
 
 #### Geo3D by Flugan
 
