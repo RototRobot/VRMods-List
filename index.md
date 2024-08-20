@@ -450,6 +450,10 @@ Wii U
 
 [![Decaf](https://i.imgur.com/HOJe0qt.jpg)](https://github.com/CarlKenner/decaf-emu)
 
+### 3dSen VR a NES Emulator by Geod Studio
+
+[![NES](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954280/header.jpg?t=1720846769)](https://store.steampowered.com/app/954280/3dSen_VR/)
+
 
 #### N64 VR Emulator by Avaer Kazmer
 
