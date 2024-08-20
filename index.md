@@ -436,22 +436,32 @@ This adds VR to hundreds of Unity games and is more Powerful than a traditional 
 
 # VR Emulators
 
-### Carl Kenner for his Dolphin, PPSSPP, decaf-emu Emulator VR modifications
+### VR Emulators by Carl Kenner
+
+Gamecube and Wii
 
 [![Dolphin](https://i.imgur.com/xsOoJgV.jpg)](https://dolphinvr.wordpress.com/downloads/)
 
+Playstation Portable
+
 [![PPSSPP](https://i.imgur.com/jRIfCJ2.jpg)](https://forums.oculusvr.com/t5/Games-and-Apps/PPSSPP-VR-PlayStation-Portable-emulator/td-p/277791)
+
+Wii U
 
 [![Decaf](https://i.imgur.com/HOJe0qt.jpg)](https://github.com/CarlKenner/decaf-emu)
 
-#### Avaer Kazmer for his N64 VR Emulator
+
+#### N64 VR Emulator by Avaer Kazmer
 
 [![n64](https://i.imgur.com/sX0WkLT.jpg)](https://medium.com/webmr/n64-vr-with-javascript-e188de42ced5)
 
-#### Jay Mattis (braindx) for his VBjin-OVR Virtual Boy Emulator
+
+
+#### VBjin-OVR a Virtual Boy Emulator by Jay Mattis (braindx)
 
 [![VBjin](https://i.imgur.com/MK3JQk1.jpg)](https://github.com/braindx/vbjin-ovr)
 
+- A more recent [fork by (Andrew Šveikauskas) is also available](https://github.com/asveikau/vbjin-ovr)
 
 
 
