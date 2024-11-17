@@ -92,7 +92,7 @@ Silent Hill 2 (2024)
 
 [![Resident Evil Village](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2124490/header.jpg?t=1728470029)](https://github.com/praydog/SH2R-UEVR)
 
- - This is a tailored version of his Unreal injector mod with improvements for Silent hill
+ - This is a tailored version of his [Unreal injector mod](https://github.com/RototRobot/VRMods-List/blob/gh-pages/index.md#VR-Injector-tools)  with improvements for Silent hill 2.
 
 
 
