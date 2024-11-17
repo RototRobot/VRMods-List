@@ -88,6 +88,13 @@ Resident Evil 8
 
 [![Resident Evil Village](https://cdn.akamai.steamstatic.com/steam/apps/1196590/header.jpg?t=1634882204)](https://github.com/praydog/REFramework)
 
+Silent Hill 2 (2024)
+
+[![Resident Evil Village](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2124490/header.jpg?t=1728470029)](https://github.com/praydog/SH2R-UEVR)
+
+ - This is a tailored version of his Unreal injector mod with improvements for Silent hill
+
+
 
 ### Mods by fholger
 
