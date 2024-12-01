@@ -95,6 +95,12 @@ Silent Hill 2 (2024)
  - This is a tailored version of his [Unreal injector mod](https://github.com/RototRobot/VRMods-List/blob/gh-pages/index.md#VR-Injector-tools)  with improvements for Silent hill 2.
 
 
+### Mods by LivingFray
+
+Halo: Combat Evolved
+
+[![Halo](https://i.imgur.com/m3x2v7b.jpeg)](https://github.com/LivingFray/HaloCEVR)
+
 
 ### Mods by fholger
 
@@ -304,7 +310,7 @@ Not a full mod more like a re-implementation into VR
 
 #### World of Warcraft VR Mod by ProjectMimer
 
-[![WoW](https://i.imgur.com/ty1Cvct.jpeg)](https://github.com/ProjectMimer/WoVR)
+[![WoW](https://i.imgur.com/ZcxIGIU.jpeg)](https://github.com/ProjectMimer/WoVR)
 
 
 
@@ -386,7 +392,7 @@ GTA V VR mod
 
 No One Lives forever 2
 
-[![No One Lives forever 2](https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/69c8c5b08db98c39788c0c5be3f1e8c8.png)](https://github.com/LukeRoss00/nolf2-real-mod)
+[![No One Lives forever 2](https://i.imgur.com/ca54zJS.jpeg)](https://github.com/LukeRoss00/nolf2-real-mod)
 
 LukeRoss has also created mods for Cyberpunk 2077, Horizon: Zero Dawn, Mafia I, II, III (DE), Ghostwire: Tokyo, Hogwarts Legacy, High On Life, Atomic Heart, Uncharted, Watch dogs, Elden Ring, Ghost of Tsushima & Far Cry New Dawn however these are paywalled on his patreon. https://www.patreon.com/realvr
 
