@@ -151,9 +151,18 @@ Bendy and the Ink Machine VR Mod
 
 [![Bendy](https://cdn.akamai.steamstatic.com/steam/apps/622650/header.jpg?t=1669217551)](https://github.com/baggyg/BendyVR)
 
-#### We Were Here VR Mod by  LokiusV
+### Mods by LokiusV
+
+We Were Here VR Mod
 
 [![Here](https://cdn.cloudflare.steamstatic.com/steam/apps/582500/header.jpg?t=1709541416)](https://github.com/LokiusV/WeWereInVR)
+
+The Elder Scrolls II: Daggerfall Unity VR Mod
+
+[![TES](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1812390/header.jpg?t=1656353357)](https://github.com/LokiusV/Daggerfall-Unity-VR)
+
+
+https://github.com/LokiusV/Daggerfall-Unity-VR
 
 #### Deep Rock Galactic VR Mod by Alch3m1st
 
