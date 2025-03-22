@@ -161,9 +161,6 @@ The Elder Scrolls II: Daggerfall Unity VR Mod
 
 [![TES](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1812390/header.jpg?t=1656353357)](https://github.com/LokiusV/Daggerfall-Unity-VR)
 
-
-https://github.com/LokiusV/Daggerfall-Unity-VR
-
 #### Deep Rock Galactic VR Mod by Alch3m1st
 
 [![Deep Rock Galactic](https://cdn.cloudflare.steamstatic.com/steam/apps/548430/header.jpg?t=1653712740)](https://drg.mod.io/vrg)
