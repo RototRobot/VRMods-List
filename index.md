@@ -230,6 +230,11 @@ Updated GZDoom fork by [hh79 available here](https://github.com/hh79/gzdoomvr)
 
 [![Jedi Academy](https://cdn.akamai.steamstatic.com/steam/apps/6020/header.jpg?t=1586462966)](https://github.com/xLAva/JediAcademyLinux/releases/tag/VR-v3.1.2)
 
+
+#### Slime Rancher VR Mod by Atmudia
+[![Receiver](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/433340/header.jpg?t=1732647440)](https://www.nexusmods.com/slimerancher/mods/651)
+
+
 #### Receiver mod 7DFPS byShadowBrian
 
 [![Receiver](https://cdn.akamai.steamstatic.com/steam/apps/234190/header.jpg?t=1586267903)](https://github.com/ShadowBrian/7DFPS)
