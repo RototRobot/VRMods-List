@@ -311,6 +311,11 @@ Not a full mod more like a re-implementation into VR
 [![Iron Ling](https://cdn.cloudflare.steamstatic.com/steam/apps/1846170/header.jpg?t=1688659208)](https://jackaapacka.itch.io/iron-lung-vr)
 
 
+# UEVR 6DOF Profiles
+
+Grand Theft Auto: San Andreas UEVR Profile by Holydh
+
+[![San Andreas](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1547000/header.jpg?t=1741117455)](https://www.nexusmods.com/grandtheftautothetrilogy/mods/922)
 
 
 # Motion Gestures
