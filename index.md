@@ -11,6 +11,8 @@ Table of Contents
 
 * [Full Motion Control Games](https://github.com/RototRobot/VRMods-List/blob/gh-pages/index.md#Full-Motion-Controls)
 
+* [UEVR Profiles](https://github.com/RototRobot/VRMods-List/blob/gh-pages/index.md#uevr-6dof-profiles)
+
 * [Motion Gesture Games](https://github.com/RototRobot/VRMods-List/blob/gh-pages/index.md#Motion-Gestures)
 
 * [Head Tracked Games](https://github.com/RototRobot/VRMods-List/blob/gh-pages/index.md#Headtracked-only)
@@ -87,12 +89,6 @@ Resident Evil 7
 Resident Evil 8
 
 [![Resident Evil Village](https://cdn.akamai.steamstatic.com/steam/apps/1196590/header.jpg?t=1634882204)](https://github.com/praydog/REFramework)
-
-Silent Hill 2 (2024)
-
-[![Resident Evil Village](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2124490/header.jpg?t=1728470029)](https://github.com/praydog/SH2R-UEVR)
-
- - This is a tailored version of his [Unreal injector mod](https://github.com/RototRobot/VRMods-List/blob/gh-pages/index.md#VR-Injector-tools)  with improvements for Silent hill 2.
 
 
 ### Mods by LivingFray
@@ -313,9 +309,18 @@ Not a full mod more like a re-implementation into VR
 
 # UEVR 6DOF Profiles
 
-Grand Theft Auto: San Andreas UEVR Profile by Holydh
+ - These are is a tailored version of the [Unreal injector mod](https://github.com/RototRobot/VRMods-List/blob/gh-pages/index.md#VR-Injector-tools)
+
+
+Grand Theft Auto: San Andreas by Holydh
 
 [![San Andreas](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1547000/header.jpg?t=1741117455)](https://www.nexusmods.com/grandtheftautothetrilogy/mods/922)
+
+
+Silent Hill 2 (2024) by Praydog
+
+[![Resident Evil Village](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2124490/header.jpg?t=1728470029)](https://github.com/praydog/SH2R-UEVR)
+
 
 
 # Motion Gestures
