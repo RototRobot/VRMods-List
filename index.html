@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Filter Grid</title>
+    <style>
+        /* --- Basic Setup --- */
+        body {
+            font-family: sans-serif;
+            background-color: #0f1826;
+            margin: 0;
+            padding: 0; /* MODIFIED: Removed padding, moved to #main-content */
+        }
+
+        /* --- 1. Outer Container: Sets the stage for positioning --- */
+        #filter-controls-row {
+            display: flex;         /* Enable Flexbox */
+            align-items: flex-start; /* Align items to the top of the row */
+            flex-wrap: wrap;       /* Allow the content to wrap onto multiple lines */
+            margin-bottom: 24px;
+            padding: 0 15px; 
+            width: 100%;
+            
+            /* NEW: Use justify-content to push the groups apart */
+            justify-content: space-between; 
+
+            position: static; 
+        }
+
+        /* --- 2. Main Filter Group: Centered Block Wrapper --- */
+        #filter-buttons-group {
+            /* REMOVED: flex-grow: 1; - Using calc() instead for fixed width */
+            
+            /* Calculate the width: 
+               100% of the container - (width of filter-status + gap) 
+               I'm estimating filter-status is about 150px wide, and the gap is 15px. */
+            width: calc(100% - 165px); 
+            
+            /* Ensure there is a gap between the filter buttons and the status area */
+            margin-right: 15px; 
+            
+            /* Keep centering the filter rows */
+            text-align: center;
+            margin-top: 0; /* Adjusted for clarity */
+        }
+
+        /* * 3. Positioning the Clear Button and Count * */
+        #filter-status {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            gap: 0;
+            
+            /* Set a fixed width to support the width calculation above */
+            width: 150px; 
+            
+            /* Ensure this group stays on the right */
+            flex-shrink: 0; 
+        }
+        /* * 4. Styling the Game Count Element (Keep this section) * */
+        #game-count {
+            /* Add a little space between the button and the count */
+            margin-top: 5px; 
+            
+            /* Keep your existing styling */
+            color: white; 
+            border: 1px solid white;
+            border-radius: 12px;
+            padding: 4px 10px;
+            font-size: 0.9em;
+            white-space: nowrap; 
+        }
+
+        /* * 5. Clear Button * */
+        #clear-all-btn {
+            /* Ensure the button aligns with the center of the column */
+            align-self: center; 
+            
+            /* Remove conflicting margin settings */
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 4px; /* Keep this to align it better with the filter rows */
+            
+            /* Keep existing styling... */
+            flex-shrink: 0; 
+            background-color: #f8d7da; 
+            border-color: #f5c6cb;
+            color: #721c24; 
+            position: static; 
+        }
+
+        /* --- Existing Button Styles --- */
+        .filter-btn {
+            background-color: #ffffff;
+            border: 1px solid #ccd0d5;
+            border-radius: 18px;
+            padding: 10px 20px;
+            margin: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        /* Style for a button when it IS toggled on */
+        .filter-btn.active {
+            background-color: #276CF5;
+            color: #ffffff;
+            border-color: #276CF5;
+        }
+        /* Style for a button when it IS toggled Off */
+        .filter-btn.exclude {
+            background-color: #FF007B;
+            color: #ffffff;
+            border-color: #FF007B;
+        }
+
+        
+        .filter-btn:hover:not(.active) {
+            background-color: #f5f5f5;
+        }
+
+        .filter-btn:hover:not(.exclude) {
+            background-color: #f5f5f5;
+        }        
+
+        /* Ensure the clear button doesn't accidentally get the blue active style */
+        #clear-all-btn.active {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+
+        /*
+         * 1. Flexbox for Alignment (Clear Button & Count)
+         * We target the new wrapper to put the items side-by-side.
+         */
+        #filter-status {
+            display: flex;
+            /* Aligns the count text vertically with the button */
+            align-items: center; 
+            /* Adds a small space between the button and the count */
+            gap: 15px;
+        }
+
+        /* * 2. Styling the Game Count Element
+         * Applies the requested rounded outline and white text.
+         */
+        #game-count {
+            /* White text and border */
+            color: white; 
+            border: 1px solid white;
+            
+            /* Rounded corners */
+            border-radius: 12px;
+            
+            /* Padding for spacing inside the border */
+            padding: 4px 10px;
+            
+            /* Optionally set the font size */
+            font-size: 0.9em;
+            
+            /* Ensures the text doesn't wrap */
+            white-space: nowrap; 
+        }
+
+        /* * Optional: Ensure the main control row can accommodate the space.
+         * If your entire control row is using a layout like flex or grid, 
+         * you may need minor adjustments to the parent of #filter-status.
+         */
+        #filter-controls-row {
+            /* Example: If you want the buttons/groups on the left and status on the right */
+            /* display: flex; */
+            /* justify-content: space-between; */
+            /* align-items: flex-start; */
+        }        
+
+        /* --- 2. Game Grid --- */
+        #game-grid {
+            display: grid;
+            /* This creates the 4-wide grid as requested */
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .game-item {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .game-item .image-container {
+            position: relative;
+            /* Ensure no extra space below the image */
+            line-height: 0; 
+        }
+
+        /* This is the class JavaScript will add/remove */
+        .game-item.hide {
+            transform: scale(0.9);
+            opacity: 0;
+            display: none; /* Fallback and final state */
+        }
+
+
+        .game-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+
+        .game-item h3 {
+            position: absolute; /* Takes it out of the normal flow */
+            bottom: 0;         /* Positions it at the bottom of .image-container */
+            left: 0;           /* Starts at the left edge */
+            width: 100%;       /* Spans the full width */
+
+            min-height: 15px;
+            
+            /* Semi-transparent background (RGB for black, A for alpha/opacity) */
+            background-color: rgba(0, 0, 0, 0.7); 
+            
+            /* Text styling */
+            color: white;
+            padding: 10px;
+            margin: 0; /* Remove default margin from h3 */
+            font-size: 1.1em;
+            font-weight: normal;
+
+            /* FIX FOR AUTO-RESIZING (TRUNCATION)  */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+
+            /* Use flexbox to position the title and the button */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease-in-out; /* Smooth transition */
+            z-index: 20; /* Ensure H3 is above expanded content */
+
+        }
+
+        /* Style for the Expand Button (your "little icon") */
+        .expand-btn {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            font-size: 10px;
+            line-height: 1;
+            text-align: center;
+            margin: 0px 15px;
+            background-color: rgba(0, 0, 0, 0); 
+        }        
+
+        /* ---------------------------------------------------- */
+        /* STYLES FOR THE EXPANDED STATE */
+        /* ---------------------------------------------------- */
+
+        /* 1. Initially hide the expanded paragraph content */
+        .expanded-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 10; /* Ensure it's under the H3 overlay initially */
+            line-height: 1.5;
+
+            /* Content styling */
+            color: white;
+            padding: 10px 15px;
+            box-sizing: border-box;
+        }
+
+        /* 2. When the .game-item has the .is-expanded class, show the content */
+        .game-item.is-expanded .expanded-content {
+            background-color: rgba(0, 0, 0, 0.9); /* Full background coverage with transparency */
+            opacity: 1;
+            visibility: visible;
+            padding-top: 40px;
+            z-index: 30; /* Bring it to the top */
+        }
+
+        /* 3. Also, move the H3 element out of the way for the expanded view */
+        .game-item.is-expanded h3 {
+            background-color: transparent;
+            bottom: calc(100% - 44px); /* Moves the bar to the top of the container */
+            padding: 10px 15px;
+
+            z-index: 40;
+            background-color: rgba(0, 0, 0, 0); 
+        }
+        /* --- Responsive Design --- */
+        /* On smaller screens, go from 4-wide to 2-wide */
+        @media (max-width: 900px) {
+            #game-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* On very small screens, stack them */
+        @media (max-width: 500px) {
+            #game-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    /* ------------------------------------------- */
+    /* SIDEBAR AND HAMBURGER STYLES (MODIFIED) */
+    /* ------------------------------------------- */
+
+    /* Style for the hamburger icon button */
+    .hamburger-menu {
+        position: fixed; /* Keep it visible even when scrolling */
+        top: 20px;
+        left: 20px;
+        z-index: 1000; /* Ensure it's on top of everything */
+        font-size: 24px;
+        background: #333;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        /* MODIFIED: Added transition for the push animation */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Style for the sidebar itself */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 300px; /* Width of the menu */
+        background-color: #2c3e50; /* Dark background */
+        color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        padding: 20px;
+        box-sizing: border-box;
+        
+        /* Initially hide the menu off-screen to the left */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* MODIFIED: Class is now on the BODY, not the sidebar */
+    body.sidebar-is-open .sidebar {
+        transform: translateX(0);
+    }
+
+    /* Style for the Close Button */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Sidebar Content Styling */
+    .sidebar h2 {
+        margin-top: 60px;
+        font-size: 1.3em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .sidebar .faq-section h4 {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    .sidebar .faq-section p {
+        font-size: 0.9em;
+        line-height: 1.4;
+        color: #ccc;
+    }
+
+    /* ------------------------------------------- */
+    /* NEW STYLES FOR PUSH CONTENT (MODIFIED) */
+    /* ------------------------------------------- */
+
+    #main-content {
+        /* This wrapper holds all the content that gets pushed */
+        padding: 24px; /* Moved from body */
+        transition: margin-left 0.3s ease-in-out;
+        margin-left: 0; /* Base state */
+    }
+
+    /* When the sidebar is open, push the main content */
+    body.sidebar-is-open #main-content {
+        margin-left: 300px;
+    }
+
+    /* When the sidebar is open, push the hamburger menu */
+    body.sidebar-is-open .hamburger-menu {
+        /* Use transform for smoother animation */
+        transform: translateX(300px);
+    }
+
+
+    /* ------------------------------------------- */
+    /* Scroll to Top */
+    /* ------------------------------------------- */
+
+    #scrollToTopBtn {
+        /* Fixed position keeps it in the same place when scrolling */
+        position: fixed; 
+        
+        /* Position it slightly up from the bottom */
+        bottom: 20px; 
+        
+        /* Center it horizontally */
+        left: 50%;
+        transform: translateX(-50%); 
+        
+        /* Styling */
+        display: none; /* Initially hide the button */
+        background-color: #007bff; /* Use your primary color */
+        color: white;
+        border: none;
+        border-radius: 50%; /* Make it circular */
+        padding: 15px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.3s, background-color 0.3s;
+        z-index: 1000; /* Ensure it stays above other content */
+    }
+
+    #scrollToTopBtn:hover {
+        opacity: 1;
+        background-color: #0056b3;
+    }
+
+    /* --- A. Tooltip Container (The Button) --- */
+    /* Set the parent button to be the positioning context */
+    .has-tooltip {
+        position: relative; /* CRITICAL: All child tooltips are positioned relative to this button */
+    }
+
+    /* --- B. Tooltip Text (The actual content) --- */
+    .tooltip-text {
+        /* Hiding by default */
+        visibility: hidden;
+        opacity: 0;
+
+        /* Positioning and Style */
+        width: 150px; /* Adjust width as needed */
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 8px 10px;
+        border-radius: 6px;
+        z-index: 1000; /* Ensure it's on top of other content */
+        
+        /* Absolute Positioning relative to the button */
+        position: absolute;
+        top: 125%; /* Position above the button */
+        left: 50%;
+        margin-left: -75px; /* Half of the width (150px) to center it */
+
+        /* Animation and Delay */
+        transition: opacity 0.3s, visibility 0.3s; /* Smooth fade effect */
+        transition-delay: .5s; /* *** THIS CREATES THE 1-SECOND DELAY *** */
+    }
+
+    /* Optional: Add a small arrow/tail */
+    .tooltip-text::after {
+        content: "";
+        position: absolute;
+        bottom: 100%; /* At the bottom of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #333 transparent;
+    }
+
+
+    /* --- C. Show on Hover --- */
+    .has-tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+        /* When the mouse hovers, we reset the delay so it shows instantly */
+        transition-delay: .8s;
+    }
+
+    /* Optional: Add a delay to hide it gracefully when the mouse moves out */
+    .has-tooltip:not(:hover) .tooltip-text {
+        transition-delay: 0s 0.2s; /* Hides immediately, but has a slight fade */
+    }
+
+    </style>
+</head>
+<body>
+
+<button id="menu-toggle" class="hamburger-menu" aria-expanded="false" aria-controls="sidebar-menu">
+    &#9776; 
+</button>
+
+<div id="sidebar-menu" class="sidebar">
+    <button class="close-btn" aria-label="Close menu">&times;</button>
+    
+    <h2>Robot_ninja_pirate's Page of VR Mods</h2>
+
+    <div class="faq-section">
+        <p>Originally based on my <a href="https://docs.google.com/spreadsheets/d/1cnu3R813-RiJv9EPJD54qC7vBCrbh9xALIqz7hl5K-o/edit?usp=sharing" target="_blank">Google spreadsheet here</a> and my <a href="https://www.reddit.com/r/virtualreality/comments/rsbobp/just_wanted_to_thank_some_of_the_incredible/" target="_blank">Reddit post here,</a> </p>
+
+        <p>This list is for PCVR only! NO Oculus Quest mods or offical ports.</p>
+
+
+
+
+        <h3>See also:</h3>
+        <p>UEVR Guide: <a href="https://beastsaber.notion.site/beastsaber/Praydog-s-UEVR-Beta-Getting-Started-Guide-4c4d94ecf8cf4933b04ac362411a930e" target="_blank">Read here.</a></p>        
+        <p>User Made UEVR profiles: <a href="https://uevr-profiles.com/" target="_blank">uevr-profiles.com</a></p>
+        <p>Flat 2 VR discord for the latest mods: <a href="https://discord.gg/flat2vr" target="_blank">Join Here</a></p>
+
+
+        <p> How to Downgrade Steam Games <a href="https://www.makeuseof.com/how-to-downgrade-steam-games/" target="_blank">Read here.</a></p>
+
+
+
+
+    </div>
+</div>
+
+<div id="main-content">
+
+    <div id="filter-controls-row">
+        <div id="filter-buttons-group">
+
+            <div class="filter-group">
+                <button class="filter-btn" data-genre="motion">Full motion Controls</button>
+                <button class="filter-btn" data-genre="uevr">UEVR Profiles</button>
+                <button class="filter-btn" data-genre="gesture">Motion Gesture Games</button>
+                <button class="filter-btn" data-genre="3dof">Head Tracked Games</button>
+                <button class="filter-btn" data-genre="tool">Injector tools</button>
+                <button class="filter-btn" data-genre="emulator">VR Emulators</button>
+
+            </div>
+
+            <div class="filter-group">
+                <button class="filter-btn" data-genre="1st">First Person</button>
+                <button class="filter-btn" data-genre="3rd">Third Person</button>
+
+
+            </div>
+        </div>
+
+        <div id="filter-status">
+            <button id="clear-all-btn" class="filter-btn">Clear Filters</button>
+            <span id="game-count"></span>
+        </div>
+
+    </div>
+
+
+    <div id="game-grid">
+
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://store.steampowered.com/app/1908720/HalfLife_VR_Mod/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1908720/header.jpg" alt="Half-Life 1">
+                    <h3>
+                        Half-Life 1: VR Mod by Max Makes Mods
+                    </h3>
+                </div>
+            </a>
+        </div>      
+
+        
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/658920/header.jpg" alt="Half-Life 2: VR Mod">
+                    <h3>
+                        Half-Life 2: VR Mod by the Source VR Mod Team
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://store.steampowered.com/app/2177750/HalfLife_2_VR_Mod__Episode_One/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2177750/header.jpg" alt="Half-Life 2: VR Mod - Episode One">
+                    <h3>
+                        Half-Life 2: VR Mod - Episode One by the Source VR Mod Team
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://store.steampowered.com/app/2177760/HalfLife_2_VR_Mod__Episode_Two/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2177760/header.jpg" alt="Half-Life 2: VR Mod - Episode Two">
+                    <h3>
+                        Half-Life 2: VR Mod - Episode Two by the Source VR Mod Team
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/vittorioromeo/HL2VRU">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/Zml9h67.jpeg" alt="Half-Life 2: VR Mod">
+                    <h3>
+                        Half-Life 2: VR Mod Fork by Vittorio Romeo
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://www.nexusmods.com/halflife2episode2/mods/4/">
+                <div class="image-container">
+                    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/362890/header.jpg?t=1666633630" alt="Half-Life 2: VR Mod">
+                    <h3>
+                        Black Mesa VR Mod by Ashok0
+                    </h3>
+                </div>
+            </a>
+        </div>        
+
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/sd805/l4d2vr">
+                <div class="image-container">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg" alt="The Left 4 Dead 2 VR">
+                    <h3>
+                        The Left 4 Dead 2 VR Mod by sd805
+                    </h3>
+                </div>
+            </a>
+        </div>        
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/Gistix/portal2vr">
+                <div class="image-container">
+                    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/620/header.jpg" alt="Portal 2 VR">
+                    <h3>
+                        Portal 2 VR Mod by Gistix     
+                    </h3>
+                </div>
+            </a>
+        </div>    
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1678408548">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg" alt="Garry's Mod VR">
+                    <h3>
+                        Garry's Mod VR by Catse
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="http://www.vivecraft.org/">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/9VfVS.png" alt="Minecraft VR Vivecraft">
+                    <h3>
+                        Minecraft VR Mod Vivecraft by jrbudda and Techjar
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://discord.gg/flat2vr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/214490/header.jpg" alt="Alien: Isolation GRAND-MotherVR Mod by JayP">
+                    <h3>
+                        Alien: Isolation GrandMotherVR Mod by Nibre, JayP
+                       <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+
+                    <div id="game-details-546560" class="expanded-content">
+                        <p>
+                            Currently Build are locked in Discord.
+                        </p>
+                    </div> 
+                </div>
+            </a>
+        </div>        
+
+        <div class="game-item" data-tags="3dof 1st">
+            <a href="https://www.nexusmods.com/readyornot/mods/6914">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1144200/header.jpg" alt="VRO Mod for Ready or Not">
+                    <h3>
+                        Ready or Not Mod VRO by KITT
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="1st">
+            <a href="https://www.nexusmods.com/mechwarrior5mercenaries/mods/531">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/784080/header.jpg" alt="MechWarrior 5: Mercenaries VRWarrior by KITT">
+                    <h3>
+                        MechWarrior 5: Mercenaries VRWarrior by KITT
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/883710/header.jpg" alt="Resident Evil 2 Remake VR Mod">
+                    <h3>
+                        Resident Evil 2 Remake REFramework mod by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/952060/header.jpg" alt="Resident Evil 3 Remake VR Mod">
+                    <h3>
+                        Resident Evil 3 Remake REFramework mod by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg" alt="Resident Evil 4 Remake VR Mod">
+                    <h3>
+                        Resident Evil 4 Remake REFramework mod by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/418370/header.jpg" alt="Resident Evil 7: Biohazard VR Mod">
+                    <h3>
+                        Resident Evil 7: Biohazard REFramework mod by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1196590/header.jpg" alt="Resident Evil Village VR Mod">
+                    <h3>
+                        Resident Evil Village REFramework mod by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags=" 3dof 3rd">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/601150/header.jpg" alt="Devil May Cry 5 REFramework (VR Mod) by Praydog">
+                    <h3>
+                        Devil May Cry 5 REFramework by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 3rd">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1364780/header.jpg" alt="Street Fighter 6 REFramework (VR Mod) by Praydog">
+                    <h3>
+                        Street Fighter 6 REFramework by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 3rd">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1446780/header.jpg" alt="Monster Hunter Rise REFramework (VR Mod) by Praydog">
+                    <h3>
+                        Monster Hunter Rise REFramework by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 3rd">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1375400/header.jpg" alt="Ghosts 'n Goblins Resurrection REFramework (VR Mod) by Praydog">
+                    <h3>
+                        Ghosts 'n Goblins Resurrection REFramework by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags="3rd">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2187220/header.jpg" alt="Apollo Justice: Ace Attorney Trilogy REFramework (VR Mod) by Praydog">
+                    <h3>
+                        Apollo Justice: Ace Attorney Trilogy REFramework by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags="3rd">
+            <a href="https://github.com/praydog/REFramework/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2510710/header.jpg" alt="Kunitsu-Gami: Path of the Goddess REFramework (VR Mod) by Praydog">
+                    <h3>
+                        Kunitsu-Gami: Path of the Goddess REFramework by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/LivingFray/HaloCEVR">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/m3x2v7b.jpeg">
+                    <h3>
+                        Halo: Combat Evolved VR Mod by LivingFray
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/LivingFray/HellsingerVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1061910/header.jpg" alt="HellsingerVR Mod for Metal: Hellsinger">
+                    <h3>
+                        HellsingerVR Mod for Metal: Hellsinger by LivingFray
+                        <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+
+                    <div id="game-details-546560" class="expanded-content">
+                        <p>
+                            Following the announcement of an official VR port for Metal:Hellsinger this mod is no longer being maintained.
+                        </p>
+                    </div>                    
+                </div>
+            </a>
+        </div>        
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/fholger/crysis_vrmod">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/17300/header.jpg" alt="Crysis VR Mod">
+                    <h3>
+                        Crysis VR Mod by fholger
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/fholger/farcry_vrmod">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/13520/header.jpg" alt="Far Cry VR Mod">
+                    <h3>
+                        Far Cry VR Mod by fholger
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://raicuparta.itch.io/two-forks-vr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/383870/header.jpg" alt="Two Forks VR Mod for Firewatch">
+                    <h3>
+                        Firewatch Mod Two Forks by Raicuparta
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://outerwildsmods.com/mods/nomaivr/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/753640/header.jpg" alt="NomaiVR - Outer Wilds VR Mod">
+                    <h3>
+                        Outer Wilds VR Mod NomaiVR by Raicuparta
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://raicuparta.itch.io/shipbreaker-vr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1161580/header.jpg" alt="ShipbreakerVR Mod for Hardspace: Shipbreaker">
+                    <h3>
+                        Hardspace: Shipbreaker VR Mod by Raicuparta
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://raicuparta.itch.io/stanley-vr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1703340/header.jpg" alt="StanleyVR Mod for The Stanley Parable: Ultra Deluxe">
+                    <h3>
+                        Stanley Parable: Ultra Deluxe VR Mod by Raicuparta
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://raicuparta.itch.io/heaven-vr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1533420/header.jpg" alt="HeavenVR Mod for Neon White">
+                    <h3>
+                        Neon White VR Mod HeavenVR by Raicuparta
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://raicuparta.itch.io/baboon-vr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1059990/header.jpg" alt="BaboonVR Mod for Trombone Champ">
+                    <h3>
+                        Trombone Champ  VR Mod BaboonVR by Raicuparta
+                        <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+
+                    <div id="game-details-546560" class="expanded-content">
+                        <p>
+                            There is now an official VR Port of this on Steam if you wish to Support them and get a less janky version.
+                        </p>
+                    </div>                    
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/Team-Beef-Studios/JKXR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/6020/header.jpg" alt="JK XR VR Mod for Jedi Knight: Jedi Academy">
+                    <h3>
+                       Star Wars Jedi Knight Jedi Academy VR Mod by Team Beef
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/Team-Beef-Studios/JKXR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/6030/header.jpg" alt="JK XR VR Mod for Jedi Knight II: Jedi Outcast">
+                    <h3>
+                        Jedi Knight II: Jedi Outcast VR Mod by Team Beef
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/Team-Beef-Studios/BendyVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/622650/header.jpg" alt="BendyVR Mod for Bendy and the Ink Machine">
+                    <h3>
+                        Bendy and the Ink Machine VR Mod by Team Beef
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/LokiusV/WeWereInVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582500/header.jpg" alt="We Were in VR Mod for We Were Here">
+                    <h3>
+                        We Were Here VR Mod We Were in VR by LokiusV
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/LokiusV/Daggerfall-Unity-VR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1812390/header.jpg" alt="DFUVR - Daggerfall Unity VR Mod">
+                    <h3>
+                        The Elder Scrolls II: Daggerfall Unity VR Mod by LokiusV
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://mod.io/g/drg/m/vrg">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/548430/header.jpg" alt="VRG - Full Virtual Reality Mod for Deep Rock Galactic">
+                    <h3>
+                        Deep Rock Galactic VR Mod by Alch3m1st, Korso, HerrFristi, KITT_
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://dredgemods.com/mods/dredge_vr/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1562430/header.jpg" alt="Dredge VR Mod">
+                    <h3>
+                        Dredge VR Mod by xen-42
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://www.nexusmods.com/valheim/mods/847">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/892970/header.jpg" alt="VHVR - Valheim VR Mod">
+                    <h3>
+                        Valheim VR Mod VHVR by manicmoose99
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/DSprtn/GTFO_VR_Plugin/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/493520/header.jpg" alt="GTFO VR Plugin Mod">
+                    <h3>
+                        GTFO VR Plugin Mod by DSprtn
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://thunderstore.io/package/DrBibop/VRMod/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632360/header.jpg" alt="VRMod for Risk of Rain 2">
+                    <h3>
+                        Risk of Rain 2 VR Mod by DrBibop
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://www.raftmodding.com/mods/raftvr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg" alt="Raft RaftVR by DrBibop">
+                    <h3>
+                        Raft RaftVR by DrBibop
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/NPi2Loup/DOOM-3-BFG-VR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/208200/header.jpg" alt="DOOM 3: BFG Edition Doom 3 BFG VR: Fully Possessed by KozGit, Fishbiter, NPi2Loup">
+                    <h3>
+                        DOOM 3: BFG Edition Fully Possessed by KozGit, NPi2Loup
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/vittorioromeo/quakevr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2310/header.jpg" alt="QUAKE Quake VR by Vittorio Romeo">
+                    <h3>
+                        QUAKE VR Mod by Vittorio Romeo
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/Fishbiter/gz3doom/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2280/header.jpg" alt="The Ultimate Doom GZ3Doom (VR Source Port) by Fishbiter">
+                    <h3>
+                        The Doom (gz3doom) VR Mod by Fishbiter
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/Fishbiter/Quakespasm-OpenVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2310/header.jpg" alt="QUAKE Quakespasm-OpenVR by Fishbiter">
+                    <h3>
+                        QUAKE Quakespasm by phoboslab, Fishbiter
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://crus.cc/mod/VR/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1388770/header.jpg" alt="Cruelty Squad CrueltySquadVR-Modloader by TEDDYBEAR082">
+                    <h3>
+                        Cruelty Squad VR Mod by TEDDYBEAR082
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/veryjos/penumbra_vr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/22180/header.jpg" alt="Penumbra: Overture Penumbra VR by veryjos">
+                    <h3>
+                        Penumbra: Overture VR Mod by veryjos
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/TrevTV/DawnVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/554620/header.jpg" alt="Life Is Strange: Before The Storm DawnVR by TrevTV">
+                    <h3>
+                        Life Is Strange: Before The Storm DawnVR by TrevTV
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://www.nexusmods.com/slimerancher/mods/651">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/433340/header.jpg" alt="Slime Rancher SlimeRancherVR by Atmudia">
+                    <h3>
+                        Slime Rancher SlimeRancherVR by Atmudia
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/ShadowBrian/7DFPS">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/234190/header.jpg" alt="Receiver Receiver VR Mod by ShadowBrian">
+                    <h3>
+                        Receiver 7DFPS by ShadowBrian
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://store.steampowered.com/app/1129310/Receiver_2/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1129310/header.jpg" alt="Receiver 2 Official VR Mode (Beta Branch) by Wolfire Games">
+                    <h3>
+                        Receiver 2 VR Beta Branch by Wolfire Games
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 3rd">
+            <a href="https://github.com/FirstPersonKSP/Kerbal-VR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/220200/header.jpg" alt="Kerbal Space Program KerbalVR by JonnyOThan">
+                    <h3>
+                        Kerbal Space Program VR Mod by JonnyOThan
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/cybensis/OutwardVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/794260/header.jpg" alt="Outward Definitive Edition OutwardVR by cybensis">
+                    <h3>
+                        Outward Definitive Edition OutwardVR by cybensis
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://www.nexusmods.com/7daystodie/mods/3011?tab=description">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/251570/header.jpg" alt="7 Days to Die 7DVR by Kaaliba & necr0">
+                    <h3>
+                        7 Days to Die 7DVR by Kaaliba & necr0
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/DaXcess/CWVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2881650/header.jpg" alt="Content Warning CWVR by DaXcess">
+                    <h3>
+                        Content Warning CWVR by DaXcess
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/DaXcess/LCVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg" alt="Lethal Company LCVR by DaXcess">
+                    <h3>
+                        Lethal Company LCVR by DaXcess
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/Xenira/TechtonicaVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1457320/header.jpg" alt="Techtonica TechtonicaVR by Xenira">
+                    <h3>
+                        Techtonica TechtonicaVR by Xenira
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://zolika1351.pages.dev/mods/sr3menu">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/55230/header.jpg" alt="Saints Row: The Third ZMenu Saints Row 3 (VR Support) by Zolika1351">
+                    <h3>
+                        Saints Row: The Third ZMenu by Zolika1351
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://zolika1351.pages.dev/mods/sr5menu">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/742420/header.jpg" alt="Saints Row (2022) ZMenu Saints Row 5 (VR Support) by Zolika1351">
+                    <h3>
+                        Saints Row (2022) ZMenu Saints by Zolika1351
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/xPrinny/GunfireRebornVRMod">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1217060/header.jpg" alt="Gunfire Reborn Gunfire Reborn VR Mod by PureDark">
+                    <h3>
+                        Gunfire Reborn Gunfire Reborn VR Mod by PureDark
+                        <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+
+                    <div id="game-details-546560" class="expanded-content">
+                        <p>
+                            At time of writing (2024/08/18) the mod has not been updated to the latest build of the game you may need to rollback to an older build
+                        </p>
+                    </div>                    
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/Okabintaro/SubmersedVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg" alt="Subnautica SubmersedVR by Okabintaro">
+                    <h3>
+                        Subnautica SubmersedVR by Okabintaro
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st">
+            <a href="https://github.com/jbusfield/subnauticabz-vr-motioncontrollers">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/848450/header.jpg" alt="Subnautica: Below Zero Motion Controller Support by jbusfield">
+                    <h3>
+                        Subnautica: Below Zero Motion Controller Support by jbusfield
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st remake">
+            <a href="https://www.moddb.com/mods/sclerosis-an-amnesia-vr-remake">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/57300/header.jpg" alt="Amnesia: The Dark Descent Sclerosis: an Amnesia VR remake by CreaTeam">
+                    <h3>
+                        Amnesia: The Dark Descent Sclerosis remake by CreaTeam
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st remake">
+            <a href="https://www.nexusmods.com/witcher/mods/838">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/20900/header.jpg" alt="The Witcher: Enhanced Edition The Witcher in Virtual Reality by PatrykLoan">
+                    <h3>
+                        The Witcher VR Remake by PatrykLoan
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st remake">
+            <a href="https://jackaapacka.itch.io/iron-lung-vr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1846170/header.jpg" alt="Iron Lung Iron Lung VR by JackaPacka">
+                    <h3>
+                        Iron Lung VR Remake by JackaPacka
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion uevr 1st">
+            <a href="https://www.nexusmods.com/grandtheftautothetrilogy/mods/922">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1547000/header.jpg" alt="Grand Theft Auto: San Andreas - Definitive Edition 6DoF UEVR Plugin by Holydh">
+                    <h3>
+                        Grand Theft Auto: San Andreas Definitive Edition Plugin by Holydh
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="motion 1st uevr">
+            <a href="https://github.com/praydog/SH2R-UEVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2124490/header.jpg" alt="SILENT HILL 2 UEVR Profile & Motion Controls by Praydog">
+                    <h3>
+                        SILENT HILL 2 Profile by Praydog
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags="gesture 1st">
+            <a href="https://www.vorpx.com/cyberpunk-vr-download/">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077 Cyberpunk VR Mod (Standalone) by Ralf (vorpX)">
+                    <h3>
+                        Cyberpunk 2077 VR Mod by vorpX
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="gesture 3rd">
+            <a href="https://github.com/ProjectMimer/WoVR">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/ZcxIGIU.jpeg" alt="World of Warcraft WoVR (World of Warcraft VR Mod) by ProjectMimer (Streetrat & Marulu)">
+                    <h3>
+                        World of Warcraft VR Mod by ProjectMimer
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="Motion 1st">
+            <a href="https://wiki.hard-light.net/index.php/Virtual_Reality">
+                <div class="image-container">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/273620/header.jpg" alt="FreeSpace 2 FSO VR Implementation by muncher">
+                    <h3>
+                        FreeSpace 2 VR Mod by muncher
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags=" 3dof 3rd">
+            <a href="https://github.com/Eusth/VookaRaylee">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/360830/header.jpg" alt="Yooka-Laylee VookaRaylee by Eusth">
+                    <h3>
+                        Yooka-Laylee VookaRaylee by Eusth
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 3rd">
+            <a href="https://github.com/InfinateXtremer/ReignitedVRMod/releases">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/996580/header.jpg" alt="Spyro Reignited Trilogy VR Mod by Arman Haçikoğlu">
+                    <h3>
+                        Spyro Reignited Trilogy VR Mod by Arman Haçikoğlu
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 3rd">
+            <a href="https://github.com/Vivero/Kerbal-VR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/220200/header.jpg" alt="Kerbal Space Program Kerbal-VR (Original) by Vivero">
+                    <h3>
+                        Kerbal Space Program VR Mod by Vivero
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 1st 3rd">
+            <a href="https://github.com/Holydh/Descenders_VRmod">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/681280/header.jpg" alt="Descenders Descenders VR Mod by Holydh">
+                    <h3>
+                        Descenders Descenders VR Mod by Holydh
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 1st">
+            <a href="https://github.com/wouterpleizier/AlbaVR">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1337010/header.jpg" alt="Alba: A Wildlife Adventure AlbaVR by wouterpleizier">
+                    <h3>
+                        Alba: A Wildlife Adventure AlbaVR by wouterpleizier
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 1st">
+            <a href="https://www.moddb.com/mods/tie-fighter-total-conversion-tftc">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/361670/header.jpg" alt="STAR WARS: TIE Fighter TIE Fighter Total Conversion (TFTC) by AngelTFTC">
+                    <h3>
+                        Star Wars TIE Fighter Total Conversion by AngelTFTC
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags="3dof 1st">
+            <a href="https://github.com/LukeRoss00/gta5-real-mod">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg" alt="Grand Theft Auto V R.E.A.L. mod by Luke Ross">
+                    <h3>
+                        Grand Theft Auto V R.E.A.L. mod by Luke Ross
+                        <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+                       <div id="game-details-546560" class="expanded-content">
+                            <p>
+                                The mod is no longer actively developed due to legal threats from Take-Two
+                            </p>
+                        </div>                       
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 1st">
+            <a href="https://github.com/LukeRoss00/nolf2-real-mod">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/ca54zJS.jpeg" alt="No One Lives Forever 2: A Spy in H.A.R.M.'s Way R.E.A.L. mod by Luke Ross">
+                    <h3>
+                        No One Lives Forever 2 R.E.A.L. mod by Luke Ross
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="1st 3rd 3dof uevr">
+            <a href="https://www.nexusmods.com/stray/mods/54">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg" alt="Stray UEVR Profile by Jessica Natalia / UEVR Community">
+                    <h3>
+                        Stray first person Mod by Jessica Natalia
+                        <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+                        <div id="game-details-546560" class="expanded-content">
+                            <p>
+                                use in conjunction with UEVR for a first Person VR Mod, or without for 3rd.
+                            </p>
+                        </div>    
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 3rd 1st">
+            <a href="https://github.com/convexvr/sims4-vr">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg" alt="The Sims 4 Sims 4 VR Plugin by convexvr">
+                    <h3>
+                        The Sims 4 Sims 4 VR Plugin by convexvr
+                       <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+                        <div id="game-details-546560" class="expanded-content">
+                            <p>
+                                Under 2024 Maxis updated sims 4 to use directX 11 instead of directx 9. This means that the mod wont work properly anymore.
+                            </p>
+                        </div>   
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 1st">
+            <a href="http://www.kegetys.fi/category/gaming/rbrmods/">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/vWQNSou.jpg" alt="Richard Burns Rally RBRvr by Kegetys">
+                    <h3>
+                        Richard Burns Rally RBRvr by Kegetys
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 1st">
+            <a href="https://github.com/fholger/thedarkmodvr">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/fIuV3Ye.jpg" alt="The Dark Mod The Dark Mod VR Mod by fholger">
+                    <h3>
+                        The Dark Mod The Dark Mod VR Mod by fholger
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof 3rd">
+            <a href="https://mb.srb2.org/addons/srb2-vr-mod.3559/">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/jTYgbGG.jpg" alt="Sonic Robo Blast 2 SRB2VR by chreas">
+                    <h3>
+                        Sonic Robo Blast 2 SRB2VR by chreas
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="tool">
+            <a href="https://github.com/praydog/UEVR">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/A42XTux.jpeg" alt="Universal Unreal Engine VR Mod by Praydog">
+                    <h3>
+                        Universal Unreal Engine VR Mod by Praydog
+                       <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+                        <div id="game-details-546560" class="expanded-content">
+                            <p>
+                                This adds VR to hundreds of Unreal 4 and 5 games and can add 6DOF controller read the Guide for details https://beastsaber.notion.site/beastsaber/Praydog-s-UEVR-Beta-Getting-Started-Guide-4c4d94ecf8cf4933b04ac362411a930e https://uevr-profiles.com/
+                            </p>
+                        </div>   
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="tool uevr">
+            <a href="https://uevr-profiles.com/">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/vhP6M0a.jpeg" alt="UEVR profiles">
+                    <h3>
+                        UEVR profiles
+                       <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+                        <div id="game-details-546560" class="expanded-content">
+                            <p>
+                                There are far too Many UEVR Mods to list, see this compiled list instead of the Discord
+                            </p>
+                        </div>   
+                </div>
+            </a>
+        </div>
+
+
+        <div class="game-item" data-tags="tool">
+            <a href="https://github.com/Raicuparta/uuvr">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/210J5Eo.jpeg" alt="Universal Unity VR Mod by Raicuparta">
+                    <h3>
+                        Universal Unity VR Mod by Raicuparta
+                       <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+                        <div id="game-details-546560" class="expanded-content">
+                            <p>
+                                This adds VR to hundreds of Unity games and is more Powerful than a traditional VR injector.
+                            </p>
+                        </div>   
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="tool">
+            <a href="https://github.com/Flugan/Geo3D-Release">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/y6bo2f4.jpg" alt="Geo3D by Flugan">
+                    <h3>
+                        Geo3D by Flugan
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="tool">
+            <a href="https://www.vorpx.com/">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/del7xwy.jpeg" alt="Vorpx">
+                    <h3>
+                        Vorpx
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="tool">
+            <a href="http://3dsurroundgaming.com/Vk3DVision.html">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/JNxJUIi.jpg" alt="Vk3DVision by Helifax">
+                    <h3>
+                        Vk3DVision by Helifax
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="emulator">
+            <a href="https://dolphinvr.wordpress.com/downloads/">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/xsOoJgV.jpg" alt="Dolphin VR Fork by Carl Kenner">
+                    <h3>
+                        Dolphin VR Fork by Carl Kenner 
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="emulator">
+            <a href="https://forums.oculusvr.com/t5/Games-and-Apps/PPSSPP-VR-PlayStation-Portable-emulator/td-p/277791">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/jRIfCJ2.jpg" alt="Playstation Portable VR by Carl Kenner">
+                    <h3>
+                        Playstation Portable VR by Carl Kenner 
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="emulator">
+            <a href="https://github.com/CarlKenner/decaf-emu">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/HOJe0qt.jpg" alt="Wii U VR by Carl Kenner">
+                    <h3>
+                        Wii U VR by Carl Kenner 
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="emulator">
+            <a href="https://store.steampowered.com/app/954280/3dSen_VR/">
+                <div class="image-container">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954280/header.jpg?t=1720846769" alt="3dSen VR a NES Emulator by Geod Studio">
+                    <h3>
+                         3dSen VR a NES Emulator by Geod Studio
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="emulator">
+            <a href="https://medium.com/webmr/n64-vr-with-javascript-e188de42ced5">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/sX0WkLT.jpg" alt="N64 VR Emulator by Avaer Kazmer">
+                    <h3>
+                         N64 VR Emulator by Avaer Kazmer
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="emulator">
+            <a href="https://github.com/braindx/vbjin-ovr">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/MK3JQk1.jpg" alt="VBjin-OVR a Virtual Boy Emulator by Jay Mattis (braindx)">
+                    <h3>
+                         Virtual Boy Emulator VBjin-OVR by Jay Mattis (braindx)
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="emulator">
+            <a href="https://github.com/asveikau/vbjin-ovr">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/MK3JQk1.jpg" alt="VBjin-OVR fork by Andrew Šveikauskas">
+                    <h3>
+                         VBjin-OVR fork by Andrew Šveikauskas
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="game-item" data-tags="3dof">
+            <a href="https://github.com/xLAva/JediOutcastLinux/releases/tag/v1.1.0.1">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/6020/header.jpg" alt="STAR WARS Jedi Knight: Jedi Academy Oculus Rift Support by xLAva">
+                    <h3>
+                        Jedi Knight: Jedi Academy VR Mod by xLAva
+                        <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+                        <div id="game-details-546560" class="expanded-content">
+                            <p>
+                                Quite outdated at this point you should used the DrBeef Version.
+                            </p>
+                        </div>               
+                </div>
+            </a>
+        </div>
+
+        <div class="game-item" data-tags="3dof">
+            <a href="https://github.com/xLAva/JediOutcastLinux/releases/tag/v1.1.0.1">
+                <div class="image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/6030/header.jpg" alt="STAR WARS Jedi Knight II - Jedi Outcast Oculus Rift Support by xLAva">
+                    <h3>
+                        Jedi Knight II - Jedi Outcast VR Mod by xLAva
+                        <button class="expand-btn" aria-expanded="false" aria-controls="game-details-546560">i</button>
+                    </h3>
+                        <div id="game-details-546560" class="expanded-content">
+                            <p>
+                                Quite outdated at this point you should used the DrBeef Version.
+                            </p>
+                        </div>               
+                </div>
+            </a>
+        </div>
+
+    </div>  
+
+<button id="scrollToTopBtn" title="Go to top">&#9650;</button>
+
+</div> <script>
+// This JavaScript makes the filters work with three states: include, exclude, or off
+document.addEventListener('DOMContentLoaded', () => {
+    // Selector is correct based on your final HTML structure
+    const filterButtons = document.querySelectorAll('#filter-buttons-group .filter-btn');
+    const clearAllButton = document.querySelector('#clear-all-btn');
+    const gameItems = document.querySelectorAll('#game-grid .game-item');
+    
+    // 1. SELECT THE NEW ELEMENT
+    const gameCountElement = document.querySelector('#game-count'); 
+
+    // This function will run every time a button is clicked
+    const filterGames = () => {
+        // Collect all filters into separate arrays based on their state
+        const inclusionFilters = [];
+        const exclusionFilters = [];
+
+        filterButtons.forEach(button => {
+            if (button.classList.contains('active')) {
+                inclusionFilters.push(button.dataset.genre);
+            } else if (button.classList.contains('exclude')) {
+                exclusionFilters.push(button.dataset.genre);
+            }
+        });
+
+        const hasActiveFilters = inclusionFilters.length > 0 || exclusionFilters.length > 0;
+        
+        // 2. INITIALIZE A COUNTER
+        let visibleCount = 0; 
+
+        // Loop through every game item
+        gameItems.forEach(item => {
+            const itemTags = item.dataset.tags ? item.dataset.tags.split(' ') : [];
+
+            // 1. If no filters are active at all, show all games
+            if (!hasActiveFilters) {
+                item.classList.remove('hide');
+                // 3. INCREMENT COUNTER
+                visibleCount++;
+                return;
+            }
+
+            // 2. Check Inclusionary Filters (MUST have ALL of these tags)
+            const passesInclusion = inclusionFilters.every(filter => itemTags.includes(filter));
+
+            // 3. Check Exclusionary Filters (MUST NOT have ANY of these tags)
+            const failsExclusion = exclusionFilters.some(filter => itemTags.includes(filter));
+
+            // 4. Final Decision
+            if (passesInclusion && !failsExclusion) {
+                item.classList.remove('hide'); // Show it
+                // 3. INCREMENT COUNTER
+                visibleCount++;
+            } else {
+                item.classList.add('hide');   // Hide it
+            }
+        });
+        
+        // 4. UPDATE THE DISPLAYED COUNT AFTER ALL ITEMS HAVE BEEN PROCESSED
+        if (gameCountElement) {
+            gameCountElement.textContent = `${visibleCount} item${visibleCount !== 1 ? 's' : ''} visible`;
+        }
+    };
+    
+    // ... (rest of your clearFilters function and event listeners) ...
+    
+    // Clears all active filters and re-runs filterGames
+    const clearFilters = () => {
+        filterButtons.forEach(button => {
+            button.classList.remove('active');
+            button.classList.remove('exclude');
+        });
+        filterGames();
+    };
+
+    // --- BUTTON EVENT LISTENERS (THREE-STATE LOGIC) ---
+
+    // Add a click listener to EACH regular filter button (only once!)
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Check current state and transition to the next state
+
+            if (button.classList.contains('active')) {
+                // State 1 (Active/Include) -> State 2 (Exclude)
+                button.classList.remove('active');
+                button.classList.add('exclude');
+            } else if (button.classList.contains('exclude')) {
+                // State 2 (Exclude) -> State 3 (Off/Default)
+                button.classList.remove('exclude');
+                // No class change needed, it's now back to default
+            } else {
+                // State 3 (Off/Default) -> State 1 (Active/Include)
+                button.classList.add('active');
+            }
+
+            // Re-run the filter logic
+            filterGames();
+        });
+    });
+
+    // Add a click listener to the Clear All button, but only if it exists
+    if (clearAllButton) {
+        clearAllButton.addEventListener('click', clearFilters);
+    }
+    
+    // 5. RUN FILTERS ON PAGE LOAD to set the initial count!
+    filterGames();
+
+    // --- End of DOMContentLoaded function ---
+});
+            
+        // This JavaScript makes the game card info box expand
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all expand buttons
+            const expandButtons = document.querySelectorAll('.expand-btn');
+
+            expandButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    // 1. STOP the click from activating the main <a> tag link
+                    event.preventDefault(); 
+                    event.stopPropagation();
+
+                    // 2. Find the main game item container
+                    const gameItem = button.closest('.game-item');
+
+                    // 3. Toggle the expanded class
+                    gameItem.classList.toggle('is-expanded');
+
+                    // 4. Update the ARIA state for accessibility
+                    const isExpanded = gameItem.classList.contains('is-expanded');
+                    button.setAttribute('aria-expanded', isExpanded);
+                });
+            });
+        });      
+
+    // This JavaScript handles the sidebar toggle (MODIFIED)
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('menu-toggle');
+        const closeButton = document.querySelector('.sidebar .close-btn');
+        const sidebar = document.getElementById('sidebar-menu');
+
+        function toggleMenu() {
+            // MODIFIED: Toggle class on the BODY element
+            const isOpen = document.body.classList.toggle('sidebar-is-open');
+            
+            // MODIFIED: Update ARIA on the toggle button
+            toggleButton.setAttribute('aria-expanded', isOpen);
+        }
+
+        // Open menu when hamburger is clicked
+        toggleButton.addEventListener('click', toggleMenu);
+
+        // Close menu when X is clicked
+        closeButton.addEventListener('click', toggleMenu);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    // ... all your existing filter code ...
+
+    // --- NEW SCROLL TO TOP FUNCTIONALITY ---
+
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+    // Function to check scroll position and toggle button visibility
+    const scrollFunction = () => {
+        // Show the button if the user has scrolled down 300 pixels
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    // Function to scroll to the top of the document
+    const topFunction = () => {
+        // Use smooth scroll behavior if supported
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        // Fallback for older browsers
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
+
+    // 1. Add event listener for when the user scrolls
+    window.onscroll = scrollFunction;
+
+    // 2. Add event listener for when the button is clicked
+    if (scrollBtn) {
+        scrollBtn.addEventListener('click', topFunction);
+    }
+    });
+
+// --- Content Loading Function ---
+        async function loadMainContent() {
+            try {
+                const response = await fetch('main-content.html');
+                
+                // Check if the file was found
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const htmlContent = await response.text();
+                const mainContentEl = document.getElementById('main-content');
+                
+                if (mainContentEl) {
+                    mainContentEl.innerHTML = htmlContent;
+                    
+                    // --- 3. Initialize Content-Dependent Scripts ---
+                    // These functions MUST run *after* the content is loaded
+                    initFilterButtons();
+                    initExpandButtons();
+                }
+
+            } catch (error) {
+                console.error('Could not load main content:', error);
+                document.getElementById('main-content').innerHTML = '<p style="color: white; text-align: center;">Error: Could not load game list.</p>';
+            }
+        }
+
+    </script>
+
+</body>
+</html>
