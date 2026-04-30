@@ -464,45 +464,119 @@
         cursor: pointer;
     }
 
-    /* Sidebar Content Styling */
-    .sidebar h2 {
-        margin-top: 60px;
-        font-size: 1.3em;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-    .sidebar .faq-section h4 {
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
-    .sidebar .faq-section p {
-        font-size: 0.9em;
-        line-height: 1.4;
-        color: #ccc;
+/* Sidebar Container */
+.sidebar {
+    /* Layout & Positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    z-index: 1000;
+    
+    /* Box Model */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #121d2e;
+    color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    
+    /* Scrolling & Animation */
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* State Management */
+body.sidebar-is-open .sidebar {
+    transform: translateX(0);
+}
+
+/* Internal Elements */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sidebar h2 {
+    margin: 60px 0 20px;
+    font-size: 1.3em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.sidebar .faq-section h4 {
+    margin: 15px 0 5px;
+}
+
+.sidebar .faq-section p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+/* Custom Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ------------------------------------------- */
+/* NEW STYLES FOR PUSH CONTENT */
+/* ------------------------------------------- */
+
+#main-content {
+    /* This wrapper holds all the content that gets pushed */
+    padding: 24px; /* Moved from body */
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 0; 
+}
+
+/* When the sidebar is open, push the main content */
+body.sidebar-is-open #main-content {
+    margin-left: 300px;
+}
+
+/* When the sidebar is open, hide the hamburger menu */
+body.sidebar-is-open .hamburger-menu {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevents clicking the invisible button */
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+/* Mobile Styles (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;          /* Full width of the screen */
+        left: 0;
+        /* Optional: increase font size for better mobile readability */
+        font-size: 1.1rem;
     }
 
-    /* ------------------------------------------- */
-    /* NEW STYLES FOR PUSH CONTENT*/
-    /* ------------------------------------------- */
-
-    #main-content {
-        /* This wrapper holds all the content that gets pushed */
-        padding: 24px; /* Moved from body */
-        transition: margin-left 0.3s ease-in-out;
-        margin-left: 0; /* Base state */
-    }
-
-    /* When the sidebar is open, push the main content */
+    /* Ensure the main content doesn't shift if you're using a 'push' effect */
     body.sidebar-is-open #main-content {
-        margin-left: 300px;
+        display: none;        /* Hide background content to save resources on mobile */
     }
 
-    /* When the sidebar is open, push the hamburger menu */
-    body.sidebar-is-open .hamburger-menu {
-        transform: translateX(300px);
+    .close-btn {
+        font-size: 40px;      /* Make it a bigger touch target for fingers */
+        top: 20px;
+        right: 20px;
     }
-
+}
 
     /* ------------------------------------------- */
     /* Scroll to Top */
@@ -584,6 +658,32 @@
     .has-tooltip:not(:hover) .tooltip-text {
         transition-delay: 0s 0.2s; /* Hides immediately, but has a slight fade */
     }
+a {
+    color: #00d4ff; /* A bright, readable cyan */
+    text-decoration: none; /* Optional: removes the underline */
+    transition: color 0.2s ease;
+}
+a:visited {
+    color: #a29bfe; /* A lighter, desaturated lavender instead of dark purple */
+}
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.has-tooltip:not(:hover) .tooltip-text {
+    transition-delay: 0s 0.2s;
+}
+
+.controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Optional: a slight "push" effect when clicked */
+.filter-btn:active {
+    transform: scale(0.95);
+}
 
     </style>
 </head>
@@ -622,9 +722,9 @@
 
             <div class="filter-group">
                 <button class="filter-btn" data-genre="motion">Full motion Controls</button>
-                <button class="filter-btn" data-genre="uevr">UEVR Profiles</button>
-                <button class="filter-btn" data-genre="gesture">Motion Gesture Games</button>
-                <button class="filter-btn" data-genre="3dof">Head Tracked Games</button>
+                <button class="filter-btn" data-genre="gesture">Motion Gesture Only</button>
+                <button class="filter-btn" data-genre="3dof">Head Tracked Only</button>
+                <button class="filter-btn" data-genre="uevr">UEVR Profiles</button>                
                 <button class="filter-btn" data-genre="tool">Injector tools</button>
                 <button class="filter-btn" data-genre="emulator">VR Emulators</button>
 
@@ -3971,6 +4071,28 @@
             </div>
         </div>
 
+       <div class="game-item" data-tags="emulator">
+            <a href="https://github.com/iChris4/dolphinXR">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/xsOoJgV.jpg" alt="Dolphin" loading="lazy">
+                    <h3>
+                        <span class="title-main">Dolphin Emulator XR Fork</span>
+                        <span class="title-sub">by iChris4 </span>
+                    </h3>      
+                </div>
+            </a>
+            <div class="game-info-hidden" style="display: none;">
+                <span class="data-bg">https://i.imgur.com/wIgQ7Ic.jpeg</span>
+                <span class="data-desc">A more modern and updated for of the Dolphin Emulator adding OpenXR support. <br> NOTICE: this was developed with the use of AI tools.</span>     
+                <span class="data-genres"></span>
+                <span class="data-multiplayer"></span>
+                <span class="data-playtime"></span>
+                <span class="data-comfort"></span>
+                
+            </div>
+        </div>
+
+
         
        <div class="game-item" data-tags="emulator">
             <a href="https://dolphinvr.wordpress.com/downloads/">
@@ -3983,7 +4105,7 @@
                 </div>
             </a>
             <div class="game-info-hidden" style="display: none;">
-                <span class="data-bg"></span>
+                <span class="data-bg">https://i.imgur.com/Xy123gE.jpeg</span>
                 <span class="data-desc">A now abandoned specialized fork of the Dolphin emulator created by Carl Kenner that adds native head tracking, stereoscopic 3D, and "room-scale" movement to GameCube and Wii games. See the Subreddits: /r/Dolphin_VR and /r/DolphinVRcullin for details </span>     
                 <span class="data-genres"></span>
                 <span class="data-multiplayer"></span>
@@ -4004,7 +4126,7 @@
                 </div>
             </a>
             <div class="game-info-hidden" style="display: none;">
-                <span class="data-bg"></span>
+                <span class="data-bg">https://i.imgur.com/A7hGqcE.jpeg</span>
                 <span class="data-desc">A now abandoned unfinished project by Carl Kenner that sought to bring the same stereoscopic depth and head tracking found in his Dolphin VR fork to the Wii U</span>     
                 <span class="data-genres"></span>
                 <span class="data-multiplayer"></span>
@@ -4026,7 +4148,7 @@
                 </div>
             </a>
             <div class="game-info-hidden" style="display: none;">
-                <span class="data-bg"></span>
+                <span class="data-bg">https://i.imgur.com/AUUVDMF.png</span>
                 <span class="data-desc">A now abandoned specialized fork of the popular PlayStation Portable emulator, that injects true stereoscopic 3D and head tracking into PSP titles</span>     
                 <span class="data-genres"></span>
                 <span class="data-multiplayer"></span>
@@ -4048,7 +4170,7 @@
                 </div>
             </a>
             <div class="game-info-hidden" style="display: none;">
-                <span class="data-bg"></span>
+                <span class="data-bg">https://i.imgur.com/aGvllJs.jpeg</span>
                 <span class="data-desc">A unique NES emulator that uses a handcrafted "voxelization" engine to transform classic 2D pixel art into fully realized 3D dioramas</span>     
                 <span class="data-genres"></span>
                 <span class="data-multiplayer"></span>
@@ -4539,7 +4661,6 @@ const topFunction = () => {
 
 
 </html>
-
 
 
 
