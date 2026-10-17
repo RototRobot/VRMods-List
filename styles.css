@@ -1,15 +1,80 @@
+/* --- CSS Variables for Light & Dark Themes --- */
+:root {
+    /* --- Light Theme (Default / Browser Light Mode) --- */
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.08);
+    --notice-bg: #e9ecef;
+    --notice-text: #495057;
+    --notice-border: #276CF5;
+    --primary-color: #276CF5;
+    --primary-hover: #1b53c1;
+    --accent-color: #FF007B;
+    --link-color: #0066cc;
+    --link-visited: #551a8b;
+    --link-hover: #004080;
+    --sidebar-bg: #ffffff;
+    --sidebar-text: #212529;
+    --sidebar-border: rgba(0, 0, 0, 0.1);
+    --faq-text: #6c757d;
+    --overlay-bg: rgba(255, 255, 255, 0.95);
+    --h3-bg: rgba(255, 255, 255, 0.85);
+    --h3-text: #212529;
+    --border-color: #ced4da;
+    --stats-bg: rgba(255, 255, 255, 0.8);
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --tooltip-bg: #333333;
+    --tooltip-text: #ffffff;
+    --scrollbar-thumb: #cccccc;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* --- Dark Theme (Your Original Dark Blue Theme) --- */
+        --bg-color: #0f1826;
+        --text-color: #ffffff;
+        --card-bg: #1a2638;
+        --card-shadow: rgba(0, 0, 0, 0.5);
+        --notice-bg: #1a2638;
+        --notice-text: #e0e0e0;
+        --notice-border: #276CF5;
+        --primary-color: #276CF5;
+        --primary-hover: #1b53c1;
+        --accent-color: #FF007B;
+        --link-color: #00d4ff;
+        --link-visited: #a29bfe;
+        --link-hover: #ffffff;
+        --sidebar-bg: #121d2e;
+        --sidebar-text: #ffffff;
+        --sidebar-border: rgba(255, 255, 255, 0.2);
+        --faq-text: #ccc;
+        --overlay-bg: rgba(0, 0, 0, 0.9);
+        --h3-bg: rgba(0, 0, 0, 0.7);
+        --h3-text: #ffffff;
+        --border-color: rgba(255, 255, 255, 0.2);
+        --stats-bg: rgba(0, 0, 0, 0.6);
+        --hover-bg: rgba(255, 255, 255, 0.1);
+        --tooltip-bg: #333333;
+        --tooltip-text: #fff;
+        --scrollbar-thumb: #888888;
+    }
+}
+
 /* --- Basic Setup --- */
 body {
     font-family: sans-serif;
-    background-color: #0f1826;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
+
 /* --- Wikipedia-Style Header Notice --- */
 #site-notice {
-    background-color: #1a2638;
-    color: #e0e0e0;
-    border-bottom: 1px solid #276CF5;
+    background-color: var(--notice-bg);
+    color: var(--notice-text);
+    border-bottom: 1px solid var(--notice-border);
     padding: 12px 20px;
     display: flex;
     justify-content: space-between;
@@ -18,7 +83,7 @@ body {
     line-height: 1.5;
     z-index: 1001;
     position: relative;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px var(--card-shadow);
 }
 
 #site-notice-content {
@@ -28,14 +93,14 @@ body {
 }
 
 #site-notice a {
-    color: #00d4ff;
+    color: var(--link-color);
     text-decoration: underline;
 }
 
 #site-notice-dismiss {
     background: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
     border-radius: 4px;
     padding: 4px 10px;
     cursor: pointer;
@@ -45,18 +110,17 @@ body {
 }
 
 #site-notice-dismiss:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: white;
+    background-color: var(--hover-bg);
+    border-color: var(--text-color);
 }
+
 /* --- 1. Outer Container: Sets the stage for positioning --- */
 #filter-controls-row {
     display: flex; 
-    align-items: flex-start; /* Align items to the top of the row */
-    flex-wrap: wrap;       /* Allow the content to wrap onto multiple lines */
+    align-items: flex-start;
+    flex-wrap: wrap;
     margin-bottom: 24px;
-    padding: 0 15px; 
-
-    /* Use justify-content to push the groups apart */
+    padding: 0 15px;
     justify-content: space-between; 
     position: static; 
 }
@@ -74,557 +138,427 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    gap: 0;
-    
+    gap: 15px;
     width: 150px; 
-    
-    /* Ensure this group stays on the right */
     flex-shrink: 0; 
 }
 
 /* --- Expanded Hero Panel Styles --- */
 .details-panel {
-grid-column: 1 / -1;
-position: relative; /* Needed for absolute positioning of the image */
-background-color: #0f1826; 
-border: 1px solid #276CF5;
-border-radius: 12px;
-padding: 30px;
-margin-bottom: 20px;
-color: white;
-min-height: 300px; 
-overflow: hidden; /* Crops the image if it's too big */
-
-display: flex;
-align-items: center; 
-
-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-animation: slideDown 0.3s ease-out forwards;
+    grid-column: 1 / -1;
+    position: relative;
+    background-color: var(--card-bg); 
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    min-height: 300px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center; 
+    box-shadow: 0 10px 30px var(--card-shadow);
+    animation: slideDown 0.3s ease-out forwards;
 }
 
 /* The Faded Hero Image */
 .details-hero-bg {
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-width: 70%; /* Covers the right 70% of the panel */
-
-background-size: cover;
-background-position: center center;
-z-index: 0; /* Puts it behind the text */
-
-/* Linear Gradient Mask makes it fade from transparent (left) to opaque (right) */
--webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%);
-mask-image: linear-gradient(to right, transparent 0%, black 60%);
-
-opacity: 0.8; /* Slight transparency to blend better */
-transition: opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%);
+    mask-image: linear-gradient(to right, transparent 0%, black 60%);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
 /* The Content Wrapper */
 .details-panel-content {
-position: relative;
-z-index: 1; /* Puts text ON TOP of the image */
-width: 50%; /* Restricts text to the left half */
-text-shadow: 0 2px 4px rgba(0,0,0,0.8); /* Ensures text is readable over busy images */
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    text-shadow: 0 2px 4px var(--card-shadow);
 }
 
 /* Typography updates */
 .details-panel h2 {
-font-size: 2.5em;
-margin-top: 0;
-margin-bottom: 10px;
-color: white;
-font-weight: 700;
-text-shadow: 0 0 10px rgba(39, 108, 245, 0.6); /* Blue glow */
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 700;
 }
 
 .details-panel .game-desc {
-font-size: 1.1em;
-line-height: 1.6;
-color: #e0e0e0;
-margin-bottom: 25px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--notice-text);
+    margin-bottom: 25px;
 }
 
 /* Stats Grid */
 .details-stats-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 15px;
-background: rgba(0, 0, 0, 0.6); /* Darker backdrop for readability */
-padding: 15px;
-border-radius: 8px;
-border: 1px solid rgba(255,255,255,0.1);
-backdrop-filter: blur(5px); /*  blur effect behind stats */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    background: var(--stats-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(5px);
 }
 
 .stat-item strong {
-display: block;
-color: #276CF5;
-font-size: 0.85em;
-text-transform: uppercase;
-letter-spacing: 1px;
-margin-bottom: 3px;
+    display: block;
+    color: var(--primary-color);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
 }
 
 @keyframes slideDown {
-from { opacity: 0; height: 0; margin-bottom: 0; }
-to { opacity: 1; height: auto; margin-bottom: 20px; }
+    from { opacity: 0; height: 0; margin-bottom: 0; }
+    to { opacity: 1; height: auto; margin-bottom: 20px; }
 }
 
 @media (max-width: 768px) {
-.details-panel-content { width: 100%; }
-.details-hero-bg { 
-    width: 100%; 
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black);
-    mask-image: linear-gradient(to bottom, transparent, black);
-    opacity: 0.3; /* Dim it more on mobile so text is readable */
+    .details-panel-content { width: 100%; }
+    .details-hero-bg { 
+        width: 100%; 
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+        mask-image: linear-gradient(to bottom, transparent, black);
+        opacity: 0.3;
+    }
 }
+
+/* 4. Styling the Game Count Element */
+#game-count {
+    margin-top: 5px; 
+    color: var(--text-color); 
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 4px 10px;
+    font-size: 0.9em;
+    white-space: nowrap; 
 }
 
-    /* * 4. Styling the Game Count Element (Keep this section) * */
-    #game-count {
-        /* Add a little space between the button and the count */
-        margin-top: 5px; 
-        
-        /* Keep your existing styling */
-        color: white; 
-        border: 1px solid white;
-        border-radius: 12px;
-        padding: 4px 10px;
-        font-size: 0.9em;
-        white-space: nowrap; 
-    }
+/* 5. Clear Button */
+#clear-all-btn {
+    align-self: center; 
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 4px;
+    flex-shrink: 0; 
+    background-color: #f8d7da; 
+    border-color: #f5c6cb;
+    color: #721c24; 
+    position: static; 
+}
 
-    /* * 5. Clear Button * */
-    #clear-all-btn {
-        /* Ensure the button aligns with the center of the column */
-        align-self: center; 
-        
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 4px; /* Keep this to align it better with the filter rows */
-        
-        flex-shrink: 0; 
-        background-color: #f8d7da; 
-        border-color: #f5c6cb;
-        color: #721c24; 
-        position: static; 
-    }
+/* --- Existing Button Styles --- */
+.filter-btn {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 10px 20px;
+    margin: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
 
-    /* --- Existing Button Styles --- */
-    .filter-btn {
-        background-color: #ffffff;
-        border: 1px solid #ccd0d5;
-        border-radius: 18px;
-        padding: 10px 20px;
-        margin: 4px;
-        font-size: 16px;
-        font-weight: 600;
-        color: #333;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
 
-    /* Style for a button when it IS toggled on */
-    .filter-btn.active {
-        background-color: #276CF5;
-        color: #ffffff;
-        border-color: #276CF5;
-    }
-    /* Style for a button when it IS toggled Off */
-    .filter-btn.exclude {
-        background-color: #FF007B;
-        color: #ffffff;
-        border-color: #FF007B;
-    }
+.filter-btn.exclude {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
 
-    
-    .filter-btn:hover:not(.active) {
-        background-color: #f5f5f5;
-    }
+.filter-btn:hover:not(.active):not(.exclude) {
+    background-color: var(--hover-bg);
+}
 
-    .filter-btn:hover:not(.exclude) {
-        background-color: #f5f5f5;
-    }        
+#clear-all-btn.active {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
 
-    /* Ensure the clear button doesn't accidentally get the blue active style */
-    #clear-all-btn.active {
-        background-color: #f8d7da;
-        border-color: #f5c6cb;
-        color: #721c24;
-    }
+/* --- 2. Game Grid --- */
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
 
-    /* 1. Flexbox for Alignment (Clear Button & Count)*/
-    #filter-status {
-        display: flex;
-        /* Aligns the count text vertically with the button */
-        align-items: center; 
-        /* Adds a small space between the button and the count */
-        gap: 15px;
-    }
+.game-item {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
 
-    /* * 2. Styling the Game Count Element*/
-    #game-count {
-        /* White text and border */
-        color: white; 
-        border: 1px solid white;        
-        border-radius: 12px;        
-        padding: 4px 10px;            
-        font-size: 0.9em;            
-        white-space: nowrap; 
-    }
+.game-item .image-container {
+    position: relative;
+    line-height: 0; 
+}
 
-    #filter-controls-row {
-    }        
+.game-item.hide {
+    transform: scale(0.9);
+    opacity: 0;
+    display: none;
+}
 
-    /* --- 2. Game Grid --- */
-    #game-grid {
-        display: grid;
-        /* This creates the 4-wide grid as requested */
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-    }
-
-    .game-item {
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .game-item .image-container {
-        position: relative;
-        line-height: 0; 
-    }
-
-    .game-item.hide {
-        transform: scale(0.9);
-        opacity: 0;
-        display: none;
-    }
-
-
-    .game-item img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
+.game-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 .game-item h3 {
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-
-height: 30px; 
-background-color: rgba(0, 0, 0, 0.7); 
-color: white;
-margin: 0;
-padding: 0; /* Clear padding to let absolute spans align perfectly */
-
-display: flex;
-justify-content: space-between;
-align-items: center; 
-
-transition: all 0.3s ease-in-out;
-z-index: 20;
-overflow: hidden; /* Hides the titles when they slide out of the bar */
-
-font-family: sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; 
+    background-color: var(--h3-bg); 
+    color: var(--h3-text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    transition: all 0.3s ease-in-out;
+    z-index: 20;
+    overflow: hidden;
+    font-family: sans-serif;
 }
 
-/* Base style for the two-part title swap */
 .title-main, .title-sub {
-position: absolute;
-left: 10px;
-width: calc(100% - 50px); 
+    position: absolute;
+    left: 10px;
+    width: calc(100% - 50px); 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    line-height: 44px; 
+    pointer-events: none;
+    padding-left: 0.25em;
+    font-weight: 300;
+    letter-spacing: 0.5px; 
+}
 
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-
-/* Centers the text vertically within the 44px bar */
-line-height: 44px; 
-pointer-events: none; /* Let clicks pass through to the link */
-padding-left:0.25em;
-font-weight: 300;
-letter-spacing: 0.5px; 
+.title-main {
+    color: var(--h3-text);
 }
 
 .title-sub {
-opacity: 0;
-transform: translateY(20px);
-color: #276CF5; 
-font-size: 0.85em;
+    opacity: 0;
+    transform: translateY(20px);
+    color: var(--primary-color); 
+    font-size: 0.85em;
 }
 
-/* --- HOVER ANIMATION --- */
 .game-item:hover .title-main {
-opacity: 0;
-transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
 }
 .game-item:hover .title-sub {
-opacity: 1;
-transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-    .expand-btn {
-        background: none;
-        border: 1px solid white;
-        color: white;
-        border-radius: 50%;
-        width: 15px;
-        height: 15px;
-        cursor: pointer;
-        font-size: 10px;
-        line-height: 1;
-        text-align: center;
-        margin: 0px 15px;
-        background-color: rgba(0, 0, 0, 0); 
-    }        
+.expand-btn {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+    margin: 0px 15px;
+    background-color: transparent; 
+}        
 
-    /* ---------------------------------------------------- */
-    /* STYLES FOR THE EXPANDED STATE */
-    /* ---------------------------------------------------- */
+/* --- Expanded State --- */
+.expanded-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10;
+    line-height: 1.5;
+    color: var(--text-color);
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
 
-    /* 1. Initially hide the expanded paragraph content */
-    .expanded-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease-in-out;
-        z-index: 10; /* Ensure it's under the H3 overlay initially */
-        line-height: 1.5;
+.game-item.is-expanded .expanded-content {
+    background-color: var(--overlay-bg);
+    opacity: 1;
+    visibility: visible;
+    padding-top: 40px;
+    z-index: 30;
+}
 
-        /* Content styling */
-        color: white;
-        padding: 10px 15px;
-        box-sizing: border-box;
+.game-item.is-expanded h3 {
+    background-color: transparent;
+    bottom: calc(100% - 44px);
+    padding: 10px 15px;
+    z-index: 40;
+}
+
+@media (max-width: 900px) {
+    #game-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    /* 2. When the .game-item has the .is-expanded class, show the content */
-    .game-item.is-expanded .expanded-content {
-        background-color: rgba(0, 0, 0, 0.9); /* Full background coverage with transparency */
-        opacity: 1;
-        visibility: visible;
-        padding-top: 40px;
-        z-index: 30;
+@media (max-width: 500px) {
+    #game-grid {
+        grid-template-columns: 1fr;
     }
+}
 
-    /* 3. Also, move the H3 element out of the way for the expanded view */
-    .game-item.is-expanded h3 {
-        background-color: transparent;
-        bottom: calc(100% - 44px); /* Moves the bar to the top of the container */
-        padding: 10px 15px;
-
-        z-index: 40;
-        background-color: rgba(0, 0, 0, 0); 
-    }
-    /* --- Responsive Design --- */
-    /* On smaller screens, go from 4-wide to 2-wide */
-    @media (max-width: 900px) {
-        #game-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    /* On very small screens, stack them */
-    @media (max-width: 500px) {
-        #game-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-/* ------------------------------------------- */
-/* SIDEBAR AND HAMBURGER STYLES */
-/* ------------------------------------------- */
-
-/* Style for the hamburger icon button */
+/* --- Sidebar and Hamburger Styles --- */
 .hamburger-menu {
-    position: fixed; /* Keep it visible even when scrolling */
+    position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 1000; /* Ensure it's on top of everything */
+    z-index: 1000;
     font-size: 24px;
-    background: #333;
-    color: white;
-    border: none;
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
-    /* Added transition for the push animation */
     transition: transform 0.3s ease-in-out;
 }
 
-/* Style for the sidebar itself */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     width: 300px;
-    background-color: #2c3e50; 
-    color: white;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    height: 100vh;
+    z-index: 1000;
     padding: 20px;
     box-sizing: border-box;
-    
-    /* Initially hide the menu off-screen to the left */
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    box-shadow: 2px 0 5px var(--card-shadow);
+    overflow-y: auto;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
 }
 
-/* Class is now on the BODY, not the sidebar */
 body.sidebar-is-open .sidebar {
     transform: translateX(0);
 }
 
-/* Style for the Close Button */
 .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
     background: none;
     border: none;
-    color: white;
+    color: inherit;
     font-size: 30px;
     cursor: pointer;
 }
 
-/* Sidebar Container */
-.sidebar {
-/* Layout & Positioning */
-position: fixed;
-top: 0;
-left: 0;
-width: 300px;
-height: 100vh;
-z-index: 1000;
-
-/* Box Model */
-padding: 20px;
-box-sizing: border-box;
-background-color: #121d2e;
-color: #fff;
-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-
-/* Scrolling & Animation */
-overflow-y: auto;
-transform: translateX(-100%);
-transition: transform 0.3s ease-in-out;
-}
-
-/* State Management */
-body.sidebar-is-open .sidebar {
-transform: translateX(0);
-}
-
-/* Internal Elements */
-.close-btn {
-position: absolute;
-top: 10px;
-right: 10px;
-background: none;
-border: none;
-color: inherit;
-font-size: 30px;
-cursor: pointer;
-}
-
 .sidebar h2 {
-margin: 60px 0 20px;
-font-size: 1.3em;
-border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-padding-bottom: 10px;
+    margin: 60px 0 20px;
+    font-size: 1.3em;
+    border-bottom: 1px solid var(--sidebar-border);
+    padding-bottom: 10px;
 }
 
 .sidebar .faq-section h4 {
-margin: 15px 0 5px;
+    margin: 15px 0 5px;
 }
 
 .sidebar .faq-section p {
-font-size: 0.9em;
-line-height: 1.4;
-color: #ccc;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: var(--faq-text);
 }
 
-/* Custom Scrollbar Styling */
 .sidebar::-webkit-scrollbar {
-width: 6px;
+    width: 6px;
 }
 .sidebar::-webkit-scrollbar-thumb {
-background: #888;
-border-radius: 10px;
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
 }
 .sidebar::-webkit-scrollbar-thumb:hover {
-background: #555;
+    background: #555;
 }
-
-/* ------------------------------------------- */
-/* NEW STYLES FOR PUSH CONTENT */
-/* ------------------------------------------- */
 
 #main-content {
-/* This wrapper holds all the content that gets pushed */
-padding: 24px; /* Moved from body */
-transition: margin-left 0.3s ease-in-out;
-margin-left: 0; 
+    padding: 24px;
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 0; 
 }
 
-/* When the sidebar is open, push the main content */
 body.sidebar-is-open #main-content {
-margin-left: 300px;
+    margin-left: 300px;
 }
 
-/* When the sidebar is open, hide the hamburger menu */
 body.sidebar-is-open .hamburger-menu {
-opacity: 0;
-visibility: hidden;
-pointer-events: none; /* Prevents clicking the invisible button */
-transition: opacity 0.3s ease, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s;
 }
 
-/* Mobile Styles (Screens smaller than 768px) */
 @media (max-width: 768px) {
-.sidebar {
-    width: 100%;          /* Full width of the screen */
-    left: 0;
-    /* Optional: increase font size for better mobile readability */
-    font-size: 1.1rem;
+    .sidebar {
+        width: 100%;
+        left: 0;
+        font-size: 1.1rem;
+    }
+    body.sidebar-is-open #main-content {
+        display: none;
+    }
+    .close-btn {
+        font-size: 40px;
+        top: 20px;
+        right: 20px;
+    }
 }
 
-/* Ensure the main content doesn't shift if you're using a 'push' effect */
-body.sidebar-is-open #main-content {
-    display: none;        /* Hide background content to save resources on mobile */
-}
-
-.close-btn {
-    font-size: 40px;      /* Make it a bigger touch target for fingers */
-    top: 20px;
-    right: 20px;
-}
-}
-
-/* ------------------------------------------- */
-/* Scroll to Top */
-/* ------------------------------------------- */
-
+/* --- Scroll to Top --- */
 #scrollToTopBtn {
     position: fixed;         
     bottom: 20px;         
     left: 50%;
     transform: translateX(-50%);         
-    display: none; /* Initially hide the button */
-    background-color: #007bff; /* Use your primary color */
+    display: none;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 50%; 
@@ -638,37 +572,29 @@ body.sidebar-is-open #main-content {
 
 #scrollToTopBtn:hover {
     opacity: 1;
-    background-color: #0056b3;
+    background-color: var(--primary-hover);
 }
 
-/* --- A. Tooltip Container (The Button) --- */
-/* Set the parent button to be the positioning context */
+/* --- Tooltips --- */
 .has-tooltip {
     position: relative; 
 }
 
-/* --- B. Tooltip Text --- */
 .tooltip-text {
-    /* Hiding by default */
     visibility: hidden;
     opacity: 0;
-
-    /* Positioning and Style */
     width: 150px;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-text);
     text-align: center;
     padding: 8px 10px;
     border-radius: 6px;
     z-index: 1000; 
-    
     position: absolute;
     top: 125%;
     left: 50%;
     margin-left: -75px;
-
-    /* Animation and Delay */
-    transition: opacity 0.3s, visibility 0.3s; /* Smooth fade effect */
+    transition: opacity 0.3s, visibility 0.3s;
     transition-delay: .5s; 
 }
 
@@ -680,11 +606,9 @@ body.sidebar-is-open #main-content {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #333 transparent;
+    border-color: transparent transparent var(--tooltip-bg) transparent;
 }
 
-
-/* --- C. Show on Hover --- */
 .has-tooltip:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
@@ -692,31 +616,28 @@ body.sidebar-is-open #main-content {
 }
 
 .has-tooltip:not(:hover) .tooltip-text {
-    transition-delay: 0s 0.2s; /* Hides immediately, but has a slight fade */
-}
-a {
-color: #00d4ff; /* A bright, readable cyan */
-text-decoration: none; /* Optional: removes the underline */
-transition: color 0.2s ease;
-}
-a:visited {
-color: #a29bfe; /* A lighter, desaturated lavender instead of dark purple */
-}
-a:hover {
-color: #ffffff;
-text-decoration: underline;
+    transition-delay: 0s 0.2s;
 }
 
-.has-tooltip:not(:hover) .tooltip-text {
-transition-delay: 0s 0.2s;
+/* --- General Links --- */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+a:visited {
+    color: var(--link-visited);
+}
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
 }
 
 .controls {
-text-align: center;
-margin: 20px 0;
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* Optional: a slight "push" effect when clicked */
 .filter-btn:active {
-transform: scale(0.95);
+    transform: scale(0.95);
 }
